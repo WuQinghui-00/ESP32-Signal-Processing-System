@@ -148,7 +148,7 @@ I (xxx) MQTT: Published: {"peak_frequency":1000}
 1. 烧录后串口会显示 ESP32 的 IP 地址
 2. 浏览器访问 `http://<ESP32_IP>/`
 3. 实时显示峰值频率和频谱数据（每 2 秒自动刷新）
-📺 演示视频：点击观看 Web 监控效果
+📺 演示视频：[点击观看 Web 监控效果](https://www.bilibili.com/video/BV1zZXfBAE6A?vd_source=5f8e03673d870706c690f30b18ceac8c)
 
 **界面预览**：
 ```
