@@ -1,0 +1,1886 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (573) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc07a4, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (845) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (3825) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3825) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3825) mqtt_client: Error transport connect[0m
+[0;32mI (3835) MQTT: MQTT disconnected[0m
+[0;32mI (3835) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3845) WEB: Web server started[0m
+[0;32mI (5615) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5625) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (5625) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (5625) MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (5635) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5635) MQTT: WiFi disconnected, retrying..[0m
+[0;32mI (5785) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (5785) MQTT: Published freq: {"peak_frequency":187}, msg_id=44281[0m
+[0;32mI (7925) MAIN: Peak frequency: 609 Hz[0m
+[0;32mI (7925) MQTT: Published freq: {"peak_frequency":609}, msg_id=61979[0m
+[0;32mI (8055) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (8075) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8075) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (10065) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (10065) MQTT: Published freq: {"peak_frequency":7}, msg_id=13551[0m
+[0;31mE (10785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (10785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (10785) task_wdt: Tasks currently running:[0m
+[0;31mE (10785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (10785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (10785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (12205) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (12205) MQTT: Published freq: {"peak_frequency":7}, msg_id=2751[0m
+[0;32mI (12905) wifi:state: auth -> init (0x200)[0m
+[0;32mI (12915) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12915) MQTT: WiFi disconnected, retrying...[0m
+[0;31mE (13845) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (13845) transport_base: Failed to open a new connection: 32769[0m
+[0;31m (13845) mqtt_client: Error transport connect[0m
+[0;32mI (13855) MQTT: MQTT disconnected[0m
+[0;32mI (14345) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (14345) MQTT: Published freq: {"peak_frequency":54}, msg_id=59695[0m
+[0;32mI (15335) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (15345) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (15345) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (15785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (15785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (15785) task_wdt: Tasks currently running:[0m
+[0;31mE (15785) task_wdt: CPU 0: wifi[0m
+[0;31mE (15785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (15785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (16485) MAIN: Peak frequency: 257 Hz[0m
+[0;32mI (16485) MQTT: Published freq: {"peak_frequency":257}, msg_id=8773[0m
+[0;32mI (18625) MAIN: Peak frequency: 265 Hz[0m
+[0;32mI (18625) MQTT: Published freq: {"peak_frequency":265}, msg_id=23712[0m
+[0;32mI (20205) wifi:state: auth -> init (0x200)[0m
+[0;32mI (20215) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (20215) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (20765) MAIN: Peak frequency: 382 Hz[0m
+[0;32mI (20765) MQTT: Published freq: {"peak_frequency":382}, msg_id=51300[0m
+[0;31mE (20785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (20785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (20785) task_wdt: Tasks currently running:[0m
+[0;31mE (20785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (20785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (20785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C053:0x3FFCC8A0 0x40008544:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (22625) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (22635) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22645) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (23645) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (23645) MQTT: Published freq: {"peak_frequency":0}, msg_id=60979[0m
+[0;32mI (25785) MAIN: Peak frequency: 109 Hz[0m
+[0;32mI (25785) MQTT: Published freq: {"peak_frequency":109}, msg_id=20067[0m
+[0;31mE (25785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (25785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (25785) task_wdt: Tasks currently running:[0m
+[0;31mE (25785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (25785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (25785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (27495) wifi:state: auth -> init (0x200)[0m
+[0;32mI (27515) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27515) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (27925) MAIN: Peak frequency: 398 Hz[0m
+[0;32mI (27925) MQTT: Published freq: {"peak_frequency":398}, msg_id=50191[0m
+[0;31mE (28855) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (28855) transport_base Failed to open a new connection: 32769[0m[0;31mE (28855) mqtt_cliet: Error transport connect[0m
+[0;32mI (28865) MQTT MQTT disconnected[0m
+[0;32mI (29935) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (29945) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (29945) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (30785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (30785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (30785) task_wdt: Tasks currently running:[0m
+[0;31mE (30785) task_wdt: CPU 0: wifi[0m
+[0;31mE (30785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (30785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (30935) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (30935) MQTT: Published freq: {"peak_frequency":78}, msg_id=57488[0m
+[0;32mI (33075) MAIN: Peak frequency: 445 Hz[0m
+[0;32mI (33075) MQTT: Published freq: {"peak_frequency":445}, msg_id=7386[0m
+[0;32mI (34815) wifi:state: auth -> init (0x200)[0m
+[0;32mI (34825) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (34825) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (35215) MAIN: Peak frequency: 546 Hz[0m
+[0;32mI (35215) MQTT: Published freq: {"peak_frequency":546}, msg_id=10282[0m
+[0;31mE (35785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (35785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (35785) task_wdt: Tasks currently running:[0m
+[0;31mE (35785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (35785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (35785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C053:0x3FFCC8A0 0x40008544:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (37255) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (37265) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (37265) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (38185) MAIN: Peak frequency: 218 Hz[0m
+[0;32mI (38185) MQTT: Published freq: {"peak_frequency":218}, msg_id=37993[0m
+[0;32mI (40335) MAIN: Peak frequency: 367 Hz[0m
+[0;32mI (40335) MQTT: Published freq: {"peak_frequency":367}, msg_id=39223[0m
+[0;31mE (40785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (40785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (40785) task_wdt: Tasks currently running:[0m
+[0;31mE (40785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (40785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (40785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (42095) wifi:state: auth -> init (0x200)[0m
+[0;32mI (42105) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (42105) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (42475) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (42475) MQTT: Published freq: {"peak_frequency":7}, msg_id=3650[0m
+[0;31mE (43865) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (43865) transport_base Failed to open a new connection: 32769[0m
+[0;3mE (43865) mqtt_client Error transport onnect[0m
+[0;32mI (43875) MQTT: QTT disconnected[0m
+[0;32mI (44525) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (44535) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (44535) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (45445) MAIN: Peak frequency: 117 Hz[0m
+[0;32mI (45445) MQTT: Published freq: {"peak_frequency":117}, msg_id=40525[0m
+[0;31mE (45785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (45785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (45785) task_wdt: Tasks currently running:[0m
+[0;31mE (45785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (45785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (45785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (47595) MAIN: Peak frequency: 406 Hz[0m
+[0;32mI (47595) MQTT: Published freq: {"peak_frequency":406}, msg_id=42513[0m
+[0;32mI (49365) wifi:state: auth -> init (0x200)[0m
+[0;32mI (49375) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (49375) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (49735) MAIN: Peak frequency: 179 Hz[0m
+[0;32mI (49735) MQTT: Published freq: {"peak_frequency":179}, msg_id=4365[0m
+[0;31mE (50785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (50785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (50785) task_wdt: Tasks currently running:[0m
+[0;31mE (50785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (50785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (50785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (51785) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (51795) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (51805) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (52715) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (52715) MQTT: Published freq: {"peak_frequency":31}, msg_id=54153[0m
+[0;32mI (54855) MAIN: Peak frequency: 281 Hz[0m
+[0;32mI (54855) MQTT: Published freq: {"peak_frequency":281}, msg_id=17665[0m
+[0;31mE (55785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (55785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (55785) task_wdt: Tasks currently running:[0m
+[0;31mE (55785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (55785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (55785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (56635) wifi:state: auth -> init (0x200)[0m
+[0;32mI (56645) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (56645) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (56995) MAIN: Peak frequency: 320 Hz[0m
+[0;32mI (56995) MQTT: Published freq: {"peak_frequency":320}, msg_id=52192[0m
+[0;31mE (58875) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (58875) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (58875) mqtt_client: Erro transport connec[0m
+[0;32mI (58885) MQTT: MQTT disconnected[0m
+[0;32mI (59065) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (59075) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (59075) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (59975) MAIN: Peak frequency: 359 Hz[0m
+[0;32mI (59975) MQTT: Published freq: {"peak_frequency":359}, msg_id=34540[0m
+[0;31mE (60785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (60785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (60785) task_wdt: Tasks currently running:[0m
+[0;31mE (60785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (60785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (60785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (62115) MAIN: Peak frequency: 171 Hz[0m
+[0;32mI (62115) MQTT: Published freq: {"peak_frequency":171}, msg_id=44975[0m
+[0;32mI (63915) wifi:state: auth -> init (0x200)[0m
+[0;32mI (63925) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (63925) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (64255) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (64255) MQTT: Published freq: {"peak_frequency":23}, msg_id=35129[0m
+[0;31mE (65785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (65785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (65785) task_wdt: Tasks currently running:[0m
+[0;31mE (65785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (65785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (65785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (66335) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (66375) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (66375) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (67235) MAIN: Peak frequency: 414 Hz[0m
+[0;32mI (67235) MQTT: Published freq: {"peak_frequency":414}, msg_id=59633[0m
+[0;32mI (69375) MAIN: Peak frequency: 210 Hz[0m
+[0;32mI (69375) MQTT: Published freq: {"peak_frequency":210}, msg_id=16993[0m
+[0;31mE (70785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (70785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (70785) task_wdt: Tasks currently running:[0m
+[0;31mE (70785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (70785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (70785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (71225) wifi:state: auth -> init (0x200)[0m
+[0;32mI (71235) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (71235) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (71515) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (71515) MQTT: Published freq: {"peak_frequency":23}, msg_id=58543[0m
+[0;32mI (73645) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (73665) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (73665) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (73665) MAIN: Peak frequency: 289 Hz[0m
+[0;32mI (73665) MQTT: Publihed freq: {"peak_freqency":289}, msg_id=30716[0m
+[0;31mE (73905) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (7455) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (74515) mqtt_client: Error transport connect[0m
+[0;32mI (74515) MQTT: MQTT disconnected[0m
+[0;31mE (75785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (75785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (75785) task_wdt: Tasks currently running:[0m
+[0;31mE (75785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (75785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (75785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (76665) MAIN: Peak frequency: 179 Hz[0m
+[0;32mI (76665) MQTT: Published freq: {"peak_frequency":179}, msg_id=33391[0m
+[0;32mI (78505) wifi:state: auth -> init (0x200)[0m
+[0;32mI (78515) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (78515) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (78805) MAIN: Peak frequency: 109 Hz[0m
+[0;32mI (78805) MQTT: Published freq: {"peak_frequency":109}, msg_id=26009[0m
+[0;31mE (80785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (80785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (80785) task_wdt: Tasks currently running:[0m
+[0;31mE (80785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (80785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (80785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (80925) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (80945) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (80945) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (81815) MAIN: Peak frequency: 203 Hz[0m
+[0;32mI (81815) MQTT: Published freq: {"peak_frequency":203}, msg_id=65215[0m
+[0;32mI (83955) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (83955) MQTT: Published freq: {"peak_frequency":0}, msg_id=29453[0m
+[0;31mE (85785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (85785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (85785) task_wdt: Tasks currently running:[0m
+[0;31mE (85785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (85785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (85785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C053:0x3FFCC8A0 0x40008544:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (85805) wifi:state: auth -> init (0x200)[0m
+[0;32mI (85835) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (85835) MQTT: WiFi disconnected, retrying..[0m
+[0;32mI (86095) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (86095) MQTT: Published freq: {"peak_frequency":23}, msg_id=12817[0m
+[0;32mI (88235) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (88235) MQTT: Published freq: {"peak_frequency":93}, msg_id=26958[0m
+[0;32mI (88255) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (88265) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (88265) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (89515) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (89515) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (89515) mqtt_client: Error transport connect[0m
+[0;32mI (89525) MQTT: MQTT disconnected[0m
+[0;32mI (90375) MAIN: Peak frequency: 289 Hz[0m
+[0;32mI (90375) MQTT: Published freq: {"peak_frequency":289}, msg_id=59933[0m
+[0;31mE (90785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (90785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (90785) task_wdt: Tasks currently running:[0m
+[0;31mE (90785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (90785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (90785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (92515) MAIN: Peak frequency: 328 Hz[0m
+[0;32mI (92515) MQTT: Published freq: {"peak_frequency":328}, msg_id=64689[0m
+[0;32mI (93105) wifi:state: auth -> init (0x200)[0m
+[0;32mI (93115) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (93115) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (94655) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (94655) MQTT: Published freq: {"peak_frequency":187}, msg_id=44486[0m
+[0;32mI (95525) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (95545) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (95545) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (95785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (95785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (95785) task_wdt: Tasks currently running:[0m
+[0;31mE (95785) task_wdt: CPU 0: wifi[0m
+[0;31mE (95785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (95785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (96795) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (96795) MQTT: Published freq: {"peak_frequency":39}, msg_id=33315[0m
+[0;32mI (98935) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (98935) MQTT: Published freq: {"peak_frequency":31}, msg_id=42525[0m
+[0;32mI (100415) wifi:state: auth -> init (0x200)[0m
+[0;32mI (100425) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (100425) MQTT: WiFi disconnected,retrying...[0m
+[0;31mE (100785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (100785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (100785) task_wdt: Tasks currently running:[0m
+[0;31mE (100785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (100785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (100785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (101075) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (101075) MQTT: Published freq: {"peak_frequency":0}, msg_id=18656[0m
+[0;32mI (102865) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (102875) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (102875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (103845) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (103845) MQTT: Published freq: {"peak_frequency":0}, msg_id=5666[0m
+[0;31mE (104525) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (104525) transport_base: Failed to oen a new connection: 32769[0m
+[0;31mE (104525) mqtt_client: Error transport cnnect[0m
+[0;32mI (104535) MQTT: MQTT disconnected[0m
+[0;31mE (105785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (105785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (105785) task_wdt: Tasks currently running:[0m
+[0;31mE (105785) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (105785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (105785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC860 0x4008A3B7:0x3FFCC870 0x400E1B82:0x3FFCC890 0x400D866F:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (105995) MAIN: Peak frequency: 203 Hz[0m
+[0;32mI (105995) MQTT: Published freq: {"peak_frequency":203}, msg_id=24428[0m
+[0;32mI (107705) wifi:state: auth -> init (0x200)[0m
+[0;32mI (107715) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (107715) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (108135) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (108135) MQTT: Published freq: {"peak_frequency":85}, msg_id=63308[0m
+[0;32mI (110125) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (110145) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (110145) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (110785) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (110785) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (110785) task_wdt: Tasks currently running:[0m
+[0;31mE (110785) task_wdt: CPU 0: wifi[0m
+[0;31mE (110785) task_wdt: CPU 1: dac_out[0m
+[0;31mE (110785) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8B0 0x400D8677:0x3FFCC8D0 0x40089FF9:0x3FFCC8F0
+
+[0;32mI (111125) MAIN: Peak frequency: 125 Hz[0m
+[0;32mI (111135) MQTT: Published freq: {"peak_frequency":125}, msg_id=21667[0m
+[0;32mI (113275) MAIN: Peak frequency: 320 Hz[0m
+[0;32mI (113275) MQTT: Published freq: {"peak_frequency":320}, msg_id=47759[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (573) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc07a4, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (835) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (3825) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3825) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3825) mqtt_client: Error transport connect[0m
+[0;32mI (3835) MQTT: MQTT disconnected[0m
+[0;32mI (3835) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3845) WEB: Web server started[0m
+[0;32mI (5605) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5605) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (5605) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (5605) MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (5615) wifi:new<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5625) MQTT: Wii disconnected, retrying...[0m
+[0;32mI (5775) MAIN: Peak frequency: 109 Hz[0m
+[0;32mI (5775) MQTT: Published freq: {"peak_frequency":109}, msg_id=39010[0m
+[0;32mI (7915) MAIN: Peak frequency: 484 Hz[0m
+[0;32mI (7915) MQTT: Published freq: {"peak_frequency":484}, msg_id=9111[0m
+[0;32mI (8045) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (8065) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8065) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (10055) MAIN: Peak frequency: 101 Hz[0m
+[0;32mI (10055) MQTT: Published freq: {"peak_frequency":101}, msg_id=33576[0m
+[0;31mE (10775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (10775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (10775) task_wdt: Tasks currently running:[0m
+[0;31mE (10775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (10775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (10775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (12195) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (12195) MQTT: Published freq: {"peak_frequency":7}, msg_id=55729[0m
+[0;32mI (12905) wifi:state: auth -> init (0x200)[0m
+[0;32mI (12915) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12915) MQTT: WiFi disconnected, retrying...[0m
+[0;31mE (13845) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (13845) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (13845)mqtt_client: Error transport connect[0
+[0;32mI (13855 MQTT: MQTT disconnected[0m
+[0;32mI (14335) MAIN: Peak frequency: 140 Hz[0m
+[0;32mI (14335) MQTT: Published freq: {"peak_frequency":140}, msg_id=47918[0m
+[0;32mI (15325) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (15345) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (15345) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (15775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (15775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (15775) task_wdt: Tasks currently running:[0m
+[0;31mE (15775) task_wdt: CPU 0: wifi[0m
+[0;31mE (15775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (15775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (16475) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (16475) MQTT: Published freq: {"peak_frequency":93}, msg_id=21134[0m
+[0;32mI (18615) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (18615) MQTT: Published freq: {"peak_frequency":187}, msg_id=29531[0m
+[0;32mI (20225) wifi:state: auth -> init (0x200)[0m
+[0;32mI (20235) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (20235) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (20755) MAIN: Peak frequency: 117 Hz[0m
+[0;32mI (20755) MQTT: Published freq: {"peak_frequency":117}, msg_id=5798[0m
+[0;31mE (20775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (20775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (20775) task_wdt: Tasks currently running:[0m
+[0;31mE (20775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (20775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (20775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (22645) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (22705) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22705) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (23695) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (23695) MQTT: Published freq: {"peak_frequency":39}, msg_id=31231[0m
+[0;31mE (25775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (25775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (25775) task_wdt: Tasks currently running:[0m
+[0;31mE (25775) task_wdt: CPU 0: main[0m
+[0;31mE (25775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (25775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (25855) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (25855) MQTT: Published freq: {"peak_frequency":7}, msg_id=52253[0m
+[0;32mI (27545) wifi:state: auth -> init (0x200)[0m
+[0;32mI (27555) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27555) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (27995) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (27995) MQTT: Published freq: {"peak_frequency":78}, msg_id=12581[0m
+[0;31mE (28855) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (28855) transport_base: Failed to ope a new connection: 32769[0
+[0;1mE (28855) mqtt_client: Error transport connect[0m
+[0;32mI 28865) MQTT: MQTT disconncted[0m
+[0;32mI (29975) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (29975) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (29975) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (30775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (30775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (30775) task_wdt: Tasks currently running:[0m
+[0;31mE (30775) task_wdt: CPU 0: wifi[0m
+[0;31mE (30775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (30775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC850 0x4008A3B7:0x3FFCC860 0x400E1B82:0x3FFCC880 0x400D866F:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (30975) MAIN: Peak frequency: 148 Hz[0m
+[0;32mI (30975) MQTT: Published freq: {"peak_frequency":148}, msg_id=52802[0m
+[0;32mI (33115) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (33115) MQTT: Published freq: {"peak_frequency":93}, msg_id=26587[0m
+[0;32mI (34835) wifi:state: auth -> init (0x200)[0m
+[0;32mI (34845) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (34845) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (35255) MAIN: Peak frequency: 46 Hz[0m
+[0;32mI (35255) MQTT: Published freq: {"peak_frequency":46}, msg_id=10113[0m
+[0;31mE (35775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (35775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (35775) task_wdt: Tasks currently running:[0m
+[0;31mE (35775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (35775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (35775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC850 0x4008A3B7:0x3FFCC860 0x400E1B82:0x3FFCC880 0x400D866F:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (37255) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (37295) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (37295) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (38235) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (38235) MQTT: Published freq: {"peak_frequency":31}, msg_id=9912[0m
+[0;32mI (40375) MAIN: Peak frequency: 445 Hz[0m
+[0;32mI (40375) MQTT: Published freq: {"peak_frequency":445}, msg_id=33535[0m
+[0;31mE (40775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (40775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (40775) task_wdt: Tasks currently running:[0m
+[0;31mE (40775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (40775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (40775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (42135) wifi:state: auth -> init (0x200)[0m
+[0;32mI (42185) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (42185) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (42515) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (42515) MQTT: Published freq: {"peak_frequency":78}, msg_id=58909[0m
+[0;31mE (43865) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (43865) transpor_base: Failed to open anew connection: 32769[0m
+[0;31mE (43865) mqtt_client: Error transport connect[0m
+[0;32mI (43875) MQT: MQTT disconnected[0m
+[0;32mI (44605) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (44615) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (44615) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (45505) MAIN: Peak frequency: 171 Hz[0m
+[0;32mI (45505) MQTT: Published freq: {"peak_frequency":171}, msg_id=24289[0m
+[0;31mE (45775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (45775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (45775) task_wdt: Tasks currently running:[0m
+[0;31mE (45775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (45775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (45775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (47645) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (47645) MQTT: Published freq: {"peak_frequency":93}, msg_id=24484[0m
+[0;32mI (49455) wifi:state: auth -> init (0x200)[0m
+[0;32mI (49475) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (49475) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (49785) MAIN: Peak frequency: 218 Hz[0m
+[0;32mI (49785) MQTT: Published freq: {"peak_frequency":218}, msg_id=15722[0m
+[0;31mE (50775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (50775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (50775) task_wdt: Tasks currently running:[0m
+[0;31mE (50775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (50775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (50775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC850 0x4008A3B7:0x3FFCC860 0x400E1B82:0x3FFCC880 0x400D866F:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (51885) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (51905) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (51905) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (52775) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (52775) MQTT: Published freq: {"peak_frequency":39}, msg_id=33655[0m
+����������������������������������������������������������������;32mI (54915) MAIN: Peak frequency: 101 Hz[0m
+[0;32mI (54915) MQTT: Published freq: {"peak_frequency":101}, msg_id=49809[0m
+[0;31mE (55775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (55775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (55775) task_wdt: Tasks currently running:[0m
+[0;31mE (55775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (55775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (55775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (56745) wifi:state: auth -> init (0x200)[0m
+[0;32mI (56765) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (56765) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (57055) MAIN: Peak frequency: 195 Hz[0m
+[0;32mI (57055) MQTT: Published freq: {"peak_frequency":195}, msg_id=59829[0m
+[0;31mE (58875) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (58875) transport_base: Faile to open a new connection: 3269[0m
+[0;31mE (58875) mqtt_client: Error transportconnect[0m
+[0;32mI (58885) MQTT: MQTT disconnected[0m
+[0;32mI (59175) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (59195) MAIN: Peak frequency: 195 Hz[0m
+[0;32mI (59195) MQTT: Published freq: {"peak_frequency":195}, msg_id=59068[0m
+[0;32mI (59225) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (59225) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (60775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (60775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (60775) task_wdt: Tasks currently running:[0m
+[0;31mE (60775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (60775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (60775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC850 0x4008A3B7:0x3FFCC860 0x400E1B82:0x3FFCC880 0x400D866F:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (61335) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (61335) MQTT: Published freq: {"peak_frequency":7}, msg_id=49584[0m
+[0;32mI (63475) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (63475) MQTT: Published freq: {"peak_frequency":78}, msg_id=21962[0m
+[0;32mI (64065) wifi:state: auth -> init (0x200)[0m
+[0;32mI (64075) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (64075) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (65615) MAIN: Peak frequency: 492 Hz[0m
+[0;32mI (65615) MQTT: Published freq: {"peak_frequency":492}, msg_id=42909[0m
+[0;31mE (65775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (65775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (65775) task_wdt: Tasks currently running:[0m
+[0;31mE (65775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (65775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (65775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC850 0x4008A3B7:0x3FFCC860 0x400E1B82:0x3FFCC880 0x400D866F:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (66485) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (66505) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (66505) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (67755) MAIN: Peak frequency: 523 Hz[0m
+[0;32mI (67755) MQTT: Published freq: {"peak_frequency":523}, msg_id=1690[0m
+[0;32mI (69895) MAIN: Peak frequency: 343 Hz[0m
+[0;32mI (69895) MQTT: Published freq: {"peak_frequency":343}, msg_id=59675[0m
+[0;31mE (70775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (70775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (70775) task_wdt: Tasks currently running:[0m
+[0;31mE (70775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (70775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (70775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C053:0x3FFCC890 0x40008544:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (71345) wifi:state: auth -> init (0x200)[0m
+[0;32mI (71355) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (71355) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (72035) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (72035) MQTT: Published freq: {"peak_frequency":39}, msg_id=34254[0m
+[0;32mI (73765) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (73775) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (73785) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (73905) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (73905) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (73905) mqtt_client: Error transport connect[0m
+[0;32mI (73925) MQTT: MQTT disconnected[0m
+[0;32mI (74805) MAIN: Peak frequency: 109 Hz[0m
+[0;32mI (74805) MQTT: Published freq: {"peak_frequency":109}, msg_id=57043[0m
+����������������������������������������������������������������0;31mE (75775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (75775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (75775) task_wdt: Tasks currently running:[0m
+[0;31mE (75775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (75775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (75775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC8A0 0x400D8677:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (76945) MAIN: Peak frequency: 484 Hz[0m
+[0;32mI (76945) MQTT: Published freq: {"peak_frequency":484}, msg_id=42649[0m
+[0;32mI (78665) wifi:state: auth -> init (0x200)[0m
+[0;32mI (78675) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (78675) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (79085) MAIN: Peak frequency: 140 Hz[0m
+[0;32mI (79085) MQTT: Published freq: {"peak_frequency":140}, msg_id=2486[0m
+[0;31mE (80775) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (80775) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (80775) task_wdt: Tasks currently running:[0m
+[0;31mE (80775) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (80775) task_wdt: CPU 1: dac_out[0m
+[0;31mE (80775) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC850 0x4008A3B7:0x3FFCC860 0x400E1B82:0x3FFCC880 0x400D866F:0x3FFCC8C0 0x40089FF9:0x3FFCC8E0
+
+[0;32mI (81085) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (81105) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (81105) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (82485) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (82495) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (82495) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (82495) MQTT: Published freq: {"peak_frequency":31}, msg_id=7837[0m
+[0;32mI (82635) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (82635) wifi:security: WPA3-SAE, phy: bgn, rsi: -45[0m
+[0;32mI (82645) wifi:pm start, type: 1[0m
+
+I (82645 wifi:dp:1, bi: 102400, li: 3, scalelisten interval from 307200 us to 307200 us
+[0;32mI (82715) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (83025) wifi:<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:2, winSize:64[0m
+[0;32mI (84155) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (84155) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (86425) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (86425) MQTT: Published freq: {"peak_frequency":187}, msg_id=13394[0m
+[0;32mI (89075) MAIN: Peak frequency: 875 Hz[0m
+[0;32mI (89985) MQTT: MQTT connected to broker[0m
+[0;32mI (90235) MQTT: Published freq: {"peak_frequency":875}, msg_id=61158[0m
+[0;32mI (92595) MAIN: Peak frequency: 132 Hz[0m
+[0;32mI (92595) MQTT: Published freq: {"peak_frequency":132}, msg_id=21695[0m
+[0;32mI (94735) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (94735) MQTT: Published freq: {"peak_frequency":23}, msg_id=1018[0m
+[0;32mI (96875) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (96885) MQTT: Published freq: {"peak_frequency":0}, msg_id=54033[0m
+[0;32mI (99025) MAIN: Peak frequency: 62 Hz[0m
+[0;32mI (99035) MQTT: Published freq: {"peak_frequency":62}, msg_id=32848[0m
+[0;32mI (101175) MAIN: Peak frequency: 62 Hz[0m
+[0;32mI (101185) MQTT: Published freq: {"peak_frequency":62}, msg_id=38674[0m
+[0;32mI (103325) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (103335) MQTT: Published freq: {"peak_frequency":85}, msg_id=36436[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008ad9e  PS      : 0x00060033  A0      : 0x8008b80d  A1      : 0x3ffcc7a0  
+A2      : 0xa5a5a5a5  A3      : 0xa5a5a5a5  A4      : 0x8008a7b9  A5      : 0x00060023  
+A6      : 0x00000001  A7      : 0x00000000  A8      : 0x00000002  A9      : 0x00000005  
+A10     : 0x3ffcaeec  A11     : 0x00b83f80  A12     : 0x00000000  A13     : 0x3ffb42b0  
+A14     : 0x36343031  A15     : 0x00000000  SAR     : 0x0000001a  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00b83fc4  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008ad9b:0x3ffcc7a0 0x4008b80a:0x3ffcc7c0 0x4008a50c:0x3ffcc7e0 0x4008a4be:0x00000001 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d621ad6d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (573) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (845) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2145) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2145) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2455) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3755) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3775) wifi:state: assoc -> run (0x10)[0m
+[0;31mE (3825) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3825) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3825) mqtt_client: Error transport connect[0m
+[0;32mI (3835) MQTT: MQTT disconnected[0m
+[0;32mI (3835) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3855) WEB: Web server started[0m
+[0;32mI (3875) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (3875) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (3875) wifi:security: WPA3-SAE, phy: bgn, rssi: -50[0m
+[0;32mI (3885) wifi:pm start, type: 1[0m
+
+[0;32mI (3885) wfidp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3895) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3895) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (3895) MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (3905) wifi:<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:44, inSize:64[0m
+[0;32mI (4055) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (4055) MQTT: Published freq: {"peak_frequency":7}, msg_id=34777[0m
+[0;32mI (4895) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4895) MQTT: Got IP: 172.2010.2[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4016a5a3  PS      : 0x00060930  A0      : 0x800d5484  A1      : 0x3ffca820  
+A2      : 0xffffffff  A3      : 0x00000003  A4      : 0x00000046  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0x3ffc9ae0  A8      : 0x8008c0d7  A9      : 0x3ffca800  
+A10     : 0x3ffca6ac  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffbc0fc  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0xffffffff  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffee  
+
+
+Backtrace: 0x4016a5a0:0x3ffca820 0x400d5481:0x3ffca840 0x40143ee1:0x3ffca860 0x40144b5b:0x3ffca880 0x40144ece:0x3ffca8a0 0x40144f35:0x3ffca8f0 0x401321b6:0x3ffca920 0x400ec6b4:0x3ffca950 0x4016b9dd:0x3ffca970 0x400ec37a:0x3ffca990 0x400d8c32:0x3ffca9d0 0x400ec971:0x3ffcb9f0 0x400ed17d:0x3ffcba30 0x400ed21c:0x3ffcbac0 0x400ec10c:0x3ffcbae0 0x400eb3e4:0x3ffcbb00 0x4016b983:0x3ffcbb20 0x400ebb1a:0x3ffcbb40 0x400ebb82:0x3ffcbb90 0x40089ff9:0x3ffcbbb0
+
+
+
+
+ELF file SHA256: 0d621ad6d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (519) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (572) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (865) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2205) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2215) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2515) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3815) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3825) wifi:state: assoc -> run (0x10)[0m
+[0;31mE (3825) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3825) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3835) mqtt_client: Error transport connect[0m
+[0;32mI (3835) MQTT: MQTT disconnected[0m
+[0;32mI (3845) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3855) WEB: Web server started[0m
+[0;32mI (3965) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (3965) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (3965) MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (3975) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (3975) wifi:security: WPA3-SAE, phy: bgn, rssi: -45[0m
+[0;32mI (3985) wifi:pm start, type: 1[0m
+
+[0;32mI (3985) wifi:dp: 1, bi: 102400, li: 3, scale listen interval frm 307200 us to 307200 us[0m
+[0;32mI (4005) wifi:<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:58, winSize:64[0m
+[0;32mI (4055) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (4135) MAIN: Peak frequency: 226 Hz[0m
+[0;32mI (4135) MQTT: Published freq: {"peak_frequency":226}, msg_id=37814[0m
+[0;32mI (4995) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4995) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (6275) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (6275) MQTT: Published freq: {"peak_frequency":93}, msg_id=9763[0m
+[0;32mI (8415) MAIN: Peak frequency: 375 Hz[0m
+[0;32mI (8415) MQTT: Published freq: {"peak_frequency":375}, msg_id=26174[0m
+[0;32mI (10555) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (10555) MQTT: Published freq: {"peak_frequency":93}, msg_id=4068[0m
+[0;32mI (12695) MAIN: Peak frequency: 328 Hz[0m
+[0;32mI (12695) MQTT: Published freq: {"peak_frequency":328}, msg_id=28367[0m
+[0;31mE (12795) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (12795) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (12795) task_wdt: Tasks currently running:[0m
+[0;31mE (12795) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (12795) task_wdt: CPU 1: dac_out[0m
+[0;31mE (12795) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC030 0x4008A3B7:0x3FFCC040 0x400E1B82:0x3FFCC060 0x400D866F:0x3FFCC0A0 0x40089FF9:0x3FFCC0C0
+
+[0;32mI (14835) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (16615) MQTT: MQTT connected to broker[0m
+[0;32mI (16675) MQTT: Published freq: {"peak_frequency":54}, msg_id=31525[0m
+[0;32mI (18815) MAIN: Peak frequency: 468 Hz[0m
+[0;32mI (18815) MQTT: Published freq: {"peak_frequency":468}, msg_id=19781[0m
+[0;32mI (20955) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (20955) MQTT: Published freq: {"peak_frequency":187}, msg_id=17970[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4016a5a8  PS      : 0x00060530  A0      : 0x800d5484  A1      : 0x3ffca3f0  
+A2      : 0x00856e04  A3      : 0x00000003  A4      : 0x00000046  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0x3ffc9ae8  A8      : 0x8008c0d7  A9      : 0x3ffca3d0  
+A10     : 0x3ffca6b4  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffbc0fc  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00856e04  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffee  
+
+
+Backtrace: 0x4016a5a5:0x3ffca3f0 0x400d5481:0x3ffca410 0x40143ee1:0x3ffca430 0x40144b5b:0x3ffca450 0x40144ece:0x3ffca470 0x40144f35:0x3ffca4c0 0x401321b6:0x3ffca4f0 0x400ec6b4:0x3ffca520 0x4016b9dd:0x3ffca540 0x400ec37a:0x3ffca560 0x400d8c32:0x3ffca5a0 0x400ec971:0x3ffcb5c0 0x400ed17d:0x3ffcb600 0x400ed21c:0x3ffcb690 0x400ec10c:0x3ffcb6b0 0x400eb3e4:0x3ffcb6d0 0x4016b983:0x3ffcb6f0 0x400ebb1a:0x3ffcb710 0x400ebb82:0x3ffcb760 0x40089ff9:0x3ffcb780
+
+
+
+
+ELF file SHA256: 0d621ad6d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (519) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (572) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (945) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (945) wifi:state: init -> auth (0xb0)[0m
+[0;31mE (3825) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3825) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3825) mqtt_client: Error transport connect[0m
+[0;32mI (3835) MQTT: MQTT disconnected[0m
+[0;32mI (3835) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3845) WEB: Web server started[0m
+[0;32mI (5645) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (5645) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (5645) MAIN: AC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (5735) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5755) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5755) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (5795) MAIN: Peak frequency: 375 Hz[0m
+[0;32mI (5795) MQTT: Published freq: {"peak_frequency":375}, msg_id=46715[0m
+[0;32mI (7945) MAIN: Peak frequency: 70 Hz[0m
+[0;32mI (7945) MQTT: Published freq: {"peak_frequency":70}, msg_id=13512[0m
+[0;32mI (8175) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (8175) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8185) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (9565) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (9575) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (9875) wifi:state: assoc -> auth (0xb0)[0m
+[0;31mE (10805) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (10805) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (10805) task_wdt: Tasks currently running:[0m
+[0;31mE (10805) task_wdt: CPU 0: main[0m
+[0;31mE (10805) task_wdt: CPU 1: dac_out[0m
+[0;31mE (10805) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC8D0 0x4008A3B7:0x3FFCC8E0 0x400E1B82:0x3FFCC900 0x400D866F:0x3FFCC940 0x40089FF9:0x3FFCC960
+
+[0;32mI (11255) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (11265) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (11295) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (11295) wifi:security: WPA3-SAE, phy: bgn, ssi: -50[0m
+[0;32mI (11305) wifi:pm start, type: 1[0m
+
+[0;32mI (11305) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (11325) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (11325) MQTT: Published freq: {"peak_frequency":54}, msg_id=50178[0m
+[0;32mI (11355) wifi:<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:110, winSize:64[0m
+[0;32mI (11385) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (12315) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (12315) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (13475) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (13475) MQTT: Published freq: {"peak_frequency":39}, msg_id=11387[0m
+[0;32mI (15615) MAIN: Peak frequency: 46 Hz[0m
+[0;32mI (20645) MQTT: MQTT connected to broker[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4016a5a8  PS      : 0x00060230  A0      : 0x800d5484  A1      : 0x3ffcacb0  
+A2      : 0x040083d6  A3      : 0x00000003  A4      : 0x00000046  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0x3ffca560  A8      : 0x8008c0d7  A9      : 0x3ffcac90  
+A10     : 0x3ffcaf70  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffbc0fc  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x040083d6  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffee  
+
+
+Backtrace: 0x4016a5a5:0x3ffcacb0 0x400d5481:0x3ffcacd0 0x40143ee1:0x3ffcacf0 0x40144b5b:0x3ffcad10 0x40144ece:0x3ffcad30 0x40144f35:0x3ffcad80 0x401321b6:0x3ffcadb0 0x400ec6b4:0x3ffcade0 0x4016b9dd:0x3ffcae00 0x400ec37a:0x3ffcae20 0x400d8c32:0x3ffcae60 0x400ec971:0x3ffcbe80 0x400ed17d:0x3ffcbec0 0x400ed21c:0x3ffcbf50 0x400ec10c:0x3ffcbf70 0x400eb3e4:0x3ffcbf90 0x4016b983:0x3ffcbfb0 0x400ebb1a:0x3ffcbfd0 0x400ebb82:0x3ffcc020 0x40089ff9:0x3ffcc040
+
+
+
+
+ELF file SHA256: 0d621ad6d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (572) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (845) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2135) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2145) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2445) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3775) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3785) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3815) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (3815) wifi:security: WPA3-SAE, phy: bgn, rssi: -57[0m
+[0;32mI (3825) wifi:pm start, type: 1[0m
+
+[0;32mI (3825) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3835) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;31mE (3845) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3845) transport_base: Failed to open a new connection: 32769[0m
+[0;32mI (3855) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3855) wifi:[0;31mE (3855) mqtt_client: Error transport connect[0m[0m
+<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:133, winSize:64[0;32mI (3865) MQTT: MQTT disconnected[0m
+
+[0;32mI (3865) WEB: Web server started[0m
+[0;32mI (3895) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (3895) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (3895) MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (4045) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (4045) MQTT: Published freq: {"peak_frequency":7}, msg_id=12294[0m
+[0;32mI (4845) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4845) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (6185) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (6185) MQTT: Published freq: {"peak_frequency":187}, msg_id=48492[0m
+[0;32mI (8325) MAIN: Peak frequency: 281 Hz[0m
+[0;32mI (8325) MQTT: Published freq: {"peak_frequency":281}, msg_id=5590[0m
+[0;31mE (9645) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (9645) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (9645) task_wdt: Tasks currently running:[0m
+[0;31mE (9645) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (9645) task_wdt: CPU 1: dac_out[0m
+[0;31mE (9645) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC500 0x4008A3B7:0x3FFCC510 0x400E1B82:0x3FFCC530 0x400D866F:0x3FFCC570 0x40089FF9:0x3FFCC590
+
+[0;32mI (10465) MAIN: Peak frequency: 195 Hz[0m
+[0;32mI (10465) MQTT: Published freq: {"peak_frequency":195}, msg_id=32376[0m
+[0;32mI (12605) MAIN: Peak frequency: 445 Hz[0m
+[0;32mI (12605) MQTT: Published freq: {"peak_frequency":445}, msg_id=59262[0m
+[0;32mI (14745) MAIN: Peak frequency: 398 Hz[0m
+[0;32mI (16675) MQTT: MQTT connected to broker[0m
+[0;32mI (16675) MQTT: Published freq: {"peak_frequency":398}, msg_id=49214[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4016a5a8  PS      : 0x00060130  A0      : 0x800d5484  A1      : 0x3ffca8d0  
+A2      : 0x040084ae  A3      : 0x00000003  A4      : 0x00000046  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0x3ffc9ec8  A8      : 0x8008c0d7  A9      : 0x3ffca8b0  
+A10     : 0x3ffcab90  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffbc0fc  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x040084ae  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffee  
+
+
+Backtrace: 0x4016a5a5:0x3ffca8d0 0x400d5481:0x3ffca8f0 0x40143ee1:0x3ffca910 0x40144b5b:0x3ffca930 0x40144ece:0x3ffca950 0x40144f35:0x3ffca9a0 0x401321b6:0x3ffca9d0 0x400ec6b4:0x3ffcaa00 0x4016b9dd:0x3ffcaa20 0x400ec37a:0x3ffcaa40 0x400d8c32:0x3ffcaa80 0x400ec971:0x3ffcbaa0 0x400ed17d:0x3ffcbae0 0x400ed21c:0x3ffcbb70 0x400ec10c:0x3ffcbb90 0x400eb3e4:0x3ffcbbb0 0x4016b983:0x3ffcbbd0 0x400ebb1a:0x3ffcbbf0 0x400ebb82:0x3ffcbc40 0x40089ff9:0x3ffcbc60
+
+
+
+
+ELF file SHA256: 0d621ad6d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (519) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (572) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (845) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2155) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2165) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2475) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3765) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3785) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3815) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (3815) wifi:security: WPA3-SAE, phy: bgn, rssi: -56[0m
+[0;32mI (3825) wifi:pm start, type: 1[0m
+
+[0;32mI (3825) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;31mE (3835) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3845) transport_base: Failed to open a new connection: 32769[0m
+[0;32mI (3845) wifi:[0;31mE (3845) mqtt_client: Error transport connect[0m[0m
+<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:165, winSize:64
+[0;32mI (3855) MQTT: MQTT disconnected[0m
+[0;32mI (3845) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3875) WEB: Web server started[0m
+[0;32mI (3915) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (4225) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (4225) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (4225) MAIN: ADC: GPIO5 (connect GPIO25 to GPIO35)[0m
+[0;32mI (4675) MAIN: Peak frequency: 15 Hz[0m
+[0;32mI (4685) MQTT: Published freq: {"peak_frequency":15}, msg_id=34547[0m
+[0;32mI (4835) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4835) MQTT: Got IP: 172.20.10.2[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008ad9e  PS      : 0x00060033  A0      : 0x8008b80d  A1      : 0x3ffcc170  
+A2      : 0xa5a5a5a5  A3      : 0xa5a5a5a5  A4      : 0x8008a7b9  A5      : 0x00060023  
+A6      : 0x00000001  A7      : 0x00000000  A8      : 0x00000002  A9      : 0x00000005  
+A10     : 0x3ffca8f0  A11     : 0xb83f8000  A12     : 0x00000000  A13     : 0x3ffb42b0  
+A14     : 0x3630312c  A15     : 0x00000000  SAR     : 0x0000001a  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0xb83f8044  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008ad9b:0x3ffcc170 0x4008b80a:0x3ffcc190 0x4008a50c:0x3ffcc1b0 0x4008a4be:0xa5a5a5a5 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d621ad6d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279d4h (162260) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=000379fc vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003b8e4 vaddr=40080000 size=04734h ( 18228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ba0h (674720) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4bc8 vaddr=40084734 size=12edch ( 77532) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  0d621ad6d...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (573) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (845) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2145) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2155) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2455) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3745) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3755) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3795) wifi:connected with Boo, aid = 2, channel 6, BW20, bssid = 9a:fe:de:d4:73:75[0m
+[0;32mI (3795) wifi:security: WPA3-SAE, phy: bgn, rssi: -57[0m
+[0;32mI (3795) wifi:pm start, type: 1[0m
+
+[0;32mI (3795) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3825) wifi:<ba-add>idx:0 (ifx:0, 9a:fe:de:d4:73:75), tid:0, ssn:181, winSize:64[0m
+[0;31mE (3825) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3825) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3835) mqtt_client: Error transport connect[0m
+[0;32mI (3845) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3845) MQTT: MQTT disconnected[0m
+[0;32mI (3855) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3865) WEB: Web server started[0m
+[0;32mI (4305) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (4305) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (4305) MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (4455) MAIN: Peak frequency: 70 Hz[0m
+[0;32mI (4455) MQTT: Published freq: {"peak_frequency":70}, msg_id=21310[0m
+[0;32mI (4805) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4805) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (6595) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (6595) MQTT: Published freq: {"peak_frequency":78}, msg_id=29644[0m
+[0;32mI (8735) MAIN: Peak frequency: 265 Hz[0m
+[0;32mI (8735) MQTT: Published freq: {"peak_frequency":265}, msg_id=54255[0m
+[0;31mE (9675) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (9675) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (9675) task_wdt: Tasks currently running:[0m
+[0;31mE (9675) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (9675) task_wdt: CPU 1: dac_out[0m
+[0;31mE (9675) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC290 0x4008A3B7:0x3FFCC2A0 0x400E1B82:0x3FFCC2C0 0x400D866F:0x3FFCC300 0x40089FF9:0x3FFCC320
+
+[0;32mI (10875) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (10875) MQTT: Published freq: {"peak_frequency":0}, msg_id=4017[0m
+[0;32mI (13015) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (13015) MQTT: Published freq: {"peak_frequency":93}, msg_id=23214[0m
+[0;31mE (14675) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (14675) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (14675) task_wdt: Tasks currently running:[0m
+[0;31mE (14675) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (14675) task_wdt: CPU 1: dac_out[0m
+[0;31mE (14675) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C053:0x3FFCC2D0 0x40008544:0x3FFCC2E0 0x400D8677:0x3FFCC300 0x40089FF9:0x3FFCC320
+
+[0;32mI (15535) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (16665) MQTT: MQTT connected to broker[0m
+[0;32mI (16955) MQTT: Published freq: {"peak_frequency":39}, msg_id=1066[0m
+[0;32mI (19305) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (19315) MQTT: Published freq: {"peak_frequency":78}, msg_id=52803[0m
+[0;32mI (22325) MAIN: Peak frequency: 421 Hz[0m
+[0;32mI (22335) MQTT: Published freq: {"peak_frequency":421}, msg_id=43938[0m
+[0;32mI (24725) MAIN: Peak frequency: 226 Hz[0m
+[0;32mI (24725) MQTT: Published freq: {"peak_frequency":226}, msg_id=2887[0m
+[0;32mI (27305) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (27315) MQTT: Published freq: {"peak_frequency":85}, msg_id=25696[0m
+����������������������������������������������������������������mI (30415) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (30415) MQTT: Published freq: {"peak_

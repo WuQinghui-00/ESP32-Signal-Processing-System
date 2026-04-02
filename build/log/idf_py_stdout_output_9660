@@ -1,0 +1,388 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27d44h (163140) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00037d6c vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003bc54 vaddr=40080000 size=043c4h ( 17348) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4a44h (674372) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4a6c vaddr=400843c4 size=1324ch ( 78412) load[0m
+[0;32mI (449) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (482) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (488) app_init: ELF file SHA256:  7dfe75b43...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (508) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (539) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (553) spi_flash: detected chip: generic[0m
+[0;32mI (556) spi_flash: flash io: dio[0m
+[0;33mW (560) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (573) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (596) main_task: Started on CPU0[0m
+[0;32mI (606) main_task: Calling app_main()[0m
+[0;32mI (626) MAIN: =========================================[0m
+[0;32mI (626) MAIN: Signal Processing System[0m
+[0;32mI (626) MAIN: =========================================[0m
+[0;32mI (626) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (646) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (656) wifi:wifi driver task: 3ffc07a4, prio:23, stack:6656, core=0[0m
+[0;32mI (666) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (666) wifi:wifi certification version: v7.0[0m
+[0;32mI (666) wifi:config NVS flash: enabled[0m
+[0;32mI (666) wifi:config nano formating: disabled[0m
+[0;32mI (666) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (676) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (676) wifi:Init management short buffer num: 32[0m
+[0;32mI (686) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (686) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (696) wifi:Init static rx buffer num: 10[0m
+[0;32mI (696) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (696) wifi_init: rx ba win: 6[0m
+[0;32mI (706) wifi_init: accept mbox: 6[0m
+[0;32mI (706) wifi_init: tcpip mbox: 32[0m
+[0;32mI (706) wifi_init: udp mbox: 6[0m
+[0;32mI (716) wifi_init: tcp mbox: 6[0m
+[0;32mI (716) wifi_init: tcp tx win: 5760[0m
+[0;32mI (726) wifi_init: tcp rx win: 5760[0m
+[0;32mI (726) wifi_init: tcp mss: 1440[0m
+[0;32mI (726) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (736) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (736) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (746) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (826) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (826) wifi:enable tsf[0m
+[0;32mI (836) MQTT: WiFi initialized[0m
+[0;32mI (846) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (846) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2156) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2156) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2466) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3786) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3796) wifi:state: assoc -> run (0x10)[0m
+[0;31mE (3836) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3836) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3836) mqtt_client: Error transport connect[0m
+[0;32mI (3846) MQTT: MQTT disconnected[0m
+[0;32mI (3846) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3856) WEB: Web server started[0m
+[0;32mI (5646) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (5646) MAIN: DAC: 1kHz sine wave on GPIO25[0m
+[0;32mI (5646) MAIN: ADC: GPI35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (5786) MAIN: Peak frequency: 156 Hz[0m
+[0;32mI (5786) MQTT: Published freq: {"peak_frequency":156}, msg_id=29096[0m
+[0;32mI (7926) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (7926) MQTT: Published freq: {"peak_frequency":31}, msg_id=56588[0m
+[0;32mI (10066) MAIN: Peak frequency: 289 Hz[0m
+[0;32mI (10066) MQTT: Published freq: {"peak_frequency":289}, msg_id=20029[0m
+[0;31mE (10786) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (10786) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (10786) task_wdt: Tasks currently running:[0m
+[0;31mE (10786) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (10786) task_wdt: CPU 1: dac_out[0m
+[0;31mE (10786) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCBFB0 0x4008A3B7:0x3FFCBFC0 0x400E1A26:0x3FFCBFE0 0x400D8657:0x3FFCC020 0x40089FF9:0x3FFCC040
+
+[0;32mI (12206) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (12206) MQTT: Published freq: {"peak_frequency":85}, msg_id=55192[0m
+[0;32mI (13796) wifi:state: run -> init (0xcc00)[0m
+[0;32mI (13816) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (13816) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (14346) MAIN: Peak frequency: 500 Hz[0m
+[0;32mI (14346) MQTT: Published freq: {"peak_frequency":500}, msg_id=45238[0m
+[0;31mE (15786) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (15786) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (15786) task_wdt: Tasks currently running:[0m
+[0;31mE (15786) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (15786) task_wdt: CPU 1: dac_out[0m
+[0;31mE (15786) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x40008541:0x3FFCC000 0x400D865F:0x3FFCC020 0x40089FF9:0x3FFCC040
+
+[0;32mI (16236) MQTT: WiFi disconnected, retrying...[0m
+[0;32mI (16276) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (16276) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (17646) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (17646) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (17676) MAIN: Peak frequency: 398 Hz[0m
+[0;32mI (17676) MQTT: Published freq: {"peak_frequency":398}, msg_id=22933[0m
+[0;32mI (18096) wifi:connected with Boo, aid = 1, channel 6, BW20, bssid = fe:ec:f2:12:f4:4d[0m
+[0;32mI (18096) wifi:security: WPA3-SAE, phy: bgn, rssi: -57[0m
+[0;32mI (18096) wifi:pm start, type: 1[0m
+
+[0;32mI (18096) wifi:dp: 1, i: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (18116) wifi:<ba-add>idx:0 (ifx:0, fe:ec:f2:12:f4:4d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (18126) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (19106) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (19106) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (19816) MAIN: Peak frequency: 492 Hz[0m
+[0;32mI (20906) MQTT: MQTT connected to broker[0m
+[0;32mI (20916) MQTT: Published freq: {"peak_frequency":492}, msg_id=8453[0m
+[0;32mI (23076) MAIN: Peak frequency: 398 Hz[0m
+[0;32mI (23076) MQTT: Published freq: {"peak_frequency":398}, msg_id=54542[0m
+[0;32mI (25226) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (25226) MQTT: Published freq: {"peak_frequency":23}, msg_id=52152[0m
+[0;32mI (27366) MAIN: Peak frequency: 351 Hz[0m
+[0;32mI (27366) MQTT: Published freq: {"peak_frequency":351}, msg_id=8425[0m
+[0;32mI (29796) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (29796) MQTT: Published freq: {"peak_frequency":54}, msg_id=48583[0m
+[0;32mI (31936) MAIN: Peak frequency: 320 Hz[0m
+[0;32mI (31936) MQTT: Published freq: {"peak_frequency":320}, msg_id=26784[0m
+[0;32mI (34076) MAIN: Peak frequency: 421 Hz[0m
+[0;32mI (34076) MQTT: Published freq: {"peak_frequency":421}, msg_id=46559[0m
+[0;32mI (36216) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (36216) MQTT: Published freq: {"peak_frequency":31}, msg_id=41759[0m
+[0;32mI (38356) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (38356) MQTT: Published freq: {"peak_frequency":7}, msg_id=12304[0m
+[0;32mI (40876) MAIN: Peak frequency: 164 Hz[0m
+[0;32mI (40876) MQTT: Published freq: {"peak_frequency":164}, msg_id=29338[0m
+[0;32mI (43016) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (43026) MQTT: Published freq: {"peak_frequency":23}, msg_id=11278[0m
+[0;32mI (45166) MAIN: Peak frequency: 132 Hz[0m
+[0;32mI (45166) MQTT: Published freq: {"peak_frequency":132}, msg_id=2775[0m
+[0;32mI (47306) MAIN: Peak frequency: 164 Hz[0m
+[0;32mI (47306) MQTT: Published freq: {"peak_frequency":164}, msg_id=26843[0m
+[0;32mI (49446) MAIN: Peak frequency: 617 Hz[0m
+[0;32mI (49446) MQTT: Published freq: {"peak_frequency":617}, msg_id=5612[0m
+[0;32mI (51586) MAIN: Peak frequency: 250 Hz[0m
+[0;32mI (51586) MQTT: Published freq: {"peak_frequency":250}, msg_id=44020[0m
+[0;32mI (54006) MAIN: Peak frequency: 164 Hz[0m
+[0;32mI (54006) MQTT: Published freq: {"peak_frequency":164}, msg_id=2846[0m
+[0;32mI (56146) MAIN: Peak frequency: 140 Hz[0m
+[0;32mI (56146) MQTT: Published freq: {"peak_frequency":140}, msg_id=39295[0m
+[0;32mI (58286) MAIN: Peak frequency: 546 Hz[0m
+[0;32mI (58286) MQTT: Published freq: {"peak_frequency":546}, msg_id=32200[0m
+[0;32mI (60846) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (60856) MQTT: Published freq: {"peak_frequency":54}, msg_id=51224[0m
+[0;32mI (62996) MAIN: Peak frequency: 93 Hz[0m
+[0;32mI (62996) MQTT: Published freq: {"peak_frequency":93}, msg_id=42221[0m
+[0;32mI (65146) MAIN: Peak frequency: 289 Hz[0m
+[0;32mI (65146) MQTT: Published freq: {"peak_frequency":289}, msg_id=10696[0m
+[0;32mI (67286) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (67296) MQTT: Published freq: {"peak_frequency":31}, msg_id=39497[0m
+[0;32mI (69436) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (69446) MQTT: Published freq: {"peak_frequency":7}, msg_id=65216[0m
+[0;32mI (71596) MAIN: Peak frequency: 296 Hz[0m
+[0;32mI (71596) MQTT: Published freq: {"peak_frequency":296}, msg_id=6455[0m
+[0;32mI (73736) MAIN: Peak frequency: 421 Hz[0m
+[0;32mI (73746) MQTT: Published freq: {"peak_frequency":421}, msg_id=54631[0m
+[0;32mI (75886) MAIN: Peak frequency: 343 Hz[0m
+[0;32mI (75886) MQTT: Published freq: {"peak_frequency":343}, msg_id=59341[0m
+[0;32mI (78026) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (78026) MQTT: Published freq: {"peak_frequency":39}, msg_id=62643[0m
+[0;32mI (80616) MAIN: Peak frequency: 125 Hz[0m
+[0;32mI (80626) MQTT: Published freq: {"peak_frequency":125}, msg_id=37846[0m
+[0;32mI (82766) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (82776) MQTT: Published freq: {"peak_frequency":78}, msg_id=29398[0m
+[0;32mI (84936) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (84936) MQTT: Published freq: {"peak_frequency":78}, msg_id=41292[0m
+[0;32mI (87086) MAIN: Peak frequency: 140 Hz[0m
+[0;32mI (87086) MQTT: Published freq: {"peak_frequency":140}, msg_id=5427[0m
+[0;32mI (89226) MAIN: Peak frequency: 640 Hz[0m
+[0;32mI (89236) MQTT: Published freq: {"peak_frequency":640}, msg_id=19333[0m
+[0;32mI (91376) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (91386) MQTT: Published freq: {"peak_frequency":54}, msg_id=64599[0m
+[0;32mI (93526) MAIN: Peak frequency: 70 Hz[0m
+[0;32mI (93526) MQTT: Published freq: {"peak_frequency":70}, msg_id=54200[0m
+[0;32mI (95696) MAIN: Peak frequency: 992 Hz[0m
+[0;32mI (95696) MQTT: Published freq: {"peak_frequency":992}, msg_id=29501[0m
+[0;32mI (97836) MAIN: Peak frequency: 367 Hz[0m
+[0;32mI (97836) MQTT: Published freq: {"peak_frequency":367}, msg_id=62217[0m
+[0;32mI (99976) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (99986) MQTT: Published freq: {"peak_frequency":78}, msg_id=28880[0m
+[0;32mI (102126) MAIN: Peak frequency: 351 Hz[0m
+[0;32mI (102126) MQTT: Published freq: {"peak_frequency":351}, msg_id=9096[0m
+[0;32mI (104276) MAIN: Peak frequency: 734 Hz[0m
+[0;32mI (104276) MQTT: Published freq: {"peak_frequency":734}, msg_id=3382[0m
+[0;32mI (107336) MAIN: Peak frequency: 132 Hz[0m
+[0;32mI (107346) MQTT: Published freq: {"peak_frequency":132}, msg_id=7418[0m
+[0;32mI (109486) MAIN: Peak frequency: 445 Hz[0m
+[0;32mI (109496) MQTT: Published freq: {"peak_frequency":445}, msg_id=51660[0m
+[0;32mI (111636) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (111636) MQTT: Published freq: {"peak_frequency":39}, msg_id=10826[0m
+[0;32mI (113786) MAIN: Peak frequency: 195 Hz[0m
+[0;32mI (113796) MQTT: Published freq: {"peak_frequency":195}, msg_id=26904[0m
+[0;32mI (115936) MAIN: Peak frequency: 179 Hz[0m
+[0;32mI (115936) MQTT: Published freq: {"peak_frequency":179}, msg_id=49578[0m
+[0;32mI (118086) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (118096) MQTT: Published freq: {"peak_frequency":187}, msg_id=12964[0m
+[0;32mI (120236) MAIN: Peak frequency: 492 Hz[0m
+[0;32mI (120246) MQTT: Published freq: {"peak_frequency":492}, msg_id=59678[0m
+[0;32mI (122386) MAIN: Peak frequency: 859 Hz[0m
+[0;32mI (122386) MQTT: Published freq: {"peak_frequency":859}, msg_id=30150[0m
+[0;32mI (124536) MAIN: Peak frequency: 62 Hz[0m
+[0;32mI (124546) MQTT: Published freq: {"peak_frequency":62}, msg_id=36770[0m
+[0;32mI (126686) MAIN: Peak frequency: 15 Hz[0m
+[0;32mI (126696) MQTT: Published freq: {"peak_frequency":15}, msg_id=56292[0m
+[0;32mI (128836) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (128846) MQTT: Published freq: {"peak_frequency":85}, msg_id=19978[0m
+[0;32mI (130986) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (130996) MQTT: Published freq: {"peak_frequency":85}, msg_id=64014[0m
+[0;32mI (133136) MAIN: Peak frequency: 62 Hz[0m
+[0;32mI (133146) MQTT: Published freq: {"peak_frequency":62}, msg_id=46053[0m
+[0;32mI (135286) MAIN: Peak frequency: 281 Hz[0m
+[0;32mI (135296) MQTT: Published freq: {"peak_frequency":281}, msg_id=24952[0m
+[0;32mI (137436) MAIN: Peak frequency: 578 Hz[0m
+[0;32mI (137446) MQTT: Published freq: {"peak_frequency":578}, msg_id=22096[0m
+[0;32mI (139586) MAIN: Peak frequency: 367 Hz[0m
+[0;32mI (139586) MQTT: Published freq: {"peak_frequency":367}, msg_id=35579[0m
+[0;32mI (141736) MAIN: Peak frequency: 234 Hz[0m
+[0;32mI (141746) MQTT: Published freq: {"peak_frequency":234}, msg_id=11514[0m
+[0;32mI (143886) MAIN: Peak frequency: 273 Hz[0m
+[0;32mI (143896) MQTT: Published freq: {"peak_frequency":273}, msg_id=13619[0m
+[0;32mI (146036) MAIN: Peak frequency: 281 Hz[0m
+[0;32mI (146046) MQTT: Published freq: {"peak_frequency":281}, msg_id=128[0m
+[0;32mI (148186) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (148186) MQTT: Published freq: {"peak_frequency":7}, msg_id=7049[0m
+[0;32mI (150336) MAIN: Peak frequency: 359 Hz[0m
+[0;32mI (150346) MQTT: Published freq: {"peak_frequency":359}, msg_id=6915[0m
+[0;32mI (152486) MAIN: Peak frequency: 179 Hz[0m
+[0;32mI (152496) MQTT: Published freq: {"peak_frequency":179}, msg_id=29863[0m
+[0;32mI (154636) MAIN: Peak frequency: 39 Hz[0m
+[0;32mI (154646) MQTT: Published freq: {"peak_frequency":39}, msg_id=5237[0m
+[0;32mI (156786) MAIN: Peak frequency: 78 Hz[0m
+[0;32mI (156796) MQTT: Published freq: {"peak_frequency":78}, msg_id=45164[0m
+[0;32mI (158936) MAIN: Peak frequency: 62 Hz[0m
+[0;32mI (158946) MQTT: Published freq: {"peak_frequency":62}, msg_id=42872[0m
+[0;32mI (161086) MAIN: Peak frequency: 265 Hz[0m
+[0;32mI (161086) MQTT: Published freq: {"peak_frequency":265}, msg_id=60640[0m
+[0;32mI (163236) MAIN: Peak frequency: 515 Hz[0m
+[0;32mI (163246) MQTT: Published freq: {"peak_frequency":515}, msg_id=597[0m
+[0;32mI (165386) MAIN: Peak frequency: 421 Hz[0m
+[0;32mI (165386) MQTT: Published freq: {"peak_frequency":421}, msg_id=7710[0m
+[0;32mI (167536) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (167546) MQTT: Published freq: {"peak_frequency":54}, msg_id=46052[0m
+[0;32mI (169686) MAIN: Peak frequency: 23 Hz[0m
+[0;32mI (169696) MQTT: Published freq: {"peak_frequency":23}, msg_id=54394[0m
+[0;32mI (171836) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (171846) MQTT: Published freq: {"peak_frequency":54}, msg_id=2289[0m
+[0;32mI (173986) MAIN: Peak frequency: 437 Hz[0m
+[0;32mI (173986) MQTT: Published freq: {"peak_frequency":437}, msg_id=48116[0m
+[0;32mI (176136) MAIN: Peak frequency: 367 Hz[0m
+[0;32mI (176146) MQTT: Published freq: {"peak_frequency":367}, msg_id=32413[0m
+[0;32mI (178286) MAIN: Peak frequency: 101 Hz[0m
+[0;32mI (178296) MQTT: Published freq: {"peak_frequency":101}, msg_id=10584[0m
+[0;32mI (180436) MAIN: Peak frequency: 1523 Hz[0m
+[0;32mI (180446) MQTT: Published freq: {"peak_frequency":1523}, msg_id=51676[0m
+[0;32mI (182586) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (182586) MQTT: Published freq: {"peak_frequency":7}, msg_id=34249[0m
+[0;32mI (184736) MAIN: Peak frequency: 250 Hz[0m
+[0;32mI (184746) MQTT: Published freq: {"peak_frequency":250}, msg_id=44953[0m
+[0;32mI (186886) MAIN: Peak frequency: 234 Hz[0m
+[0;32mI (186886) MQTT: Published freq: {"peak_frequency":234}, msg_id=36200[0m
+[0;32mI (189036) MAIN: Peak frequency: 46 Hz[0m
+[0;32mI (189046) MQTT: Published freq: {"peak_frequency":46}, msg_id=45095[0m
+[0;32mI (191186) MAIN: Peak frequency: 179 Hz[0m
+[0;32mI (191196) MQTT: Published freq: {"peak_frequency":179}, msg_id=25326[0m
+[0;32mI (193336) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (193346) MQTT: Published freq: {"peak_frequency":54}, msg_id=48327[0m
+[0;32mI (195486) MAIN: Peak frequency: 171 Hz[0m
+[0;32mI (195496) MQTT: Published freq: {"peak_frequency":171}, msg_id=64225[0m
+[0;32mI (197636) MAIN: Peak frequency: 500 Hz[0m
+[0;32mI (197636) MQTT: Published freq: {"peak_frequency":500}, msg_id=28578[0m
+[0;32mI (199786) MAIN: Peak frequency: 171 Hz[0m
+[0;32mI (199796) MQTT: Published freq: {"peak_frequency":171}, msg_id=41520[0m
+[0;32mI (201936) MAIN: Peak frequency: 335 Hz[0m
+[0;32mI (201946) MQTT: Published freq: {"peak_frequency":335}, msg_id=38259[0m
+[0;32mI (204086) MAIN: Peak frequency: 523 Hz[0m
+[0;32mI (204096) MQTT: Published freq: {"peak_frequency":523}, msg_id=11638[0m
+[0;32mI (206236) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (206236) MQTT: Published freq: {"peak_frequency":7}, msg_id=33533[0m
+[0;32mI (208386) MAIN: Peak frequency: 7 Hz[0m
+[0;32mI (208396) MQTT: Published freq: {"peak_frequency":7}, msg_id=24143[0m
+[0;32mI (210536) MAIN: Peak frequency: 492 Hz[0m
+[0;32mI (210546) MQTT: Published freq: {"peak_frequency":492}, msg_id=54448[0m
+[0;32mI (212686) MAIN: Peak frequency: 359 Hz[0m
+[0;32mI (212696) MQTT: Published freq: {"peak_frequency":359}, msg_id=43567[0m
+[0;32mI (214836) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (214846) MQTT: Published freq: {"peak_frequency":54}, msg_id=25531[0m
+[0;32mI (216986) MAIN: Peak frequency: 31 Hz[0m
+[0;32mI (216996) MQTT: Published freq: {"peak_frequency":31}, msg_id=27155[0m
+[0;32mI (219136) MAIN: Peak frequency: 70 Hz[0m
+[0;32mI (219136) MQTT: Published freq: {"peak_frequency":70}, msg_id=6124[0m
+[0;32mI (221276) MAIN: Peak frequency: 460 Hz[0m
+[0;32mI (221276) MQTT: Published freq: {"peak_frequency":460}, msg_id=20141[0m
+[0;32mI (223416) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (223416) MQTT: Published freq: {"peak_frequency":54}, msg_id=44211[0m
+[0;32mI (225556) MAIN: Peak frequency: 132 Hz[0m
+[0;32mI (225556) MQTT: Published freq: {"peak_frequency":132}, msg_id=40490[0m
+[0;32mI (227696) MAIN: Peak frequency: 132 Hz[0m
+[0;32mI (227696) MQTT: Published freq: {"peak_frequency":132}, msg_id=1824[0m
+[0;32mI (229836) MAIN: Peak frequency: 203 Hz[0m
+[0;32mI (229836) MQTT: Published freq: {"peak_frequency":203}, msg_id=39545[0m
+[0;32mI (231976) MAIN: Peak frequency: 46 Hz[0m
+[0;32mI (231976) MQTT: Published freq: {"peak_frequency":46}, msg_id=48641[0m
+[0;32mI (234116) MAIN: Peak frequency: 335 Hz[0m
+[0;32mI (234116) MQTT: Published freq: {"peak_frequency":335}, msg_id=24266[0m
+[0;32mI (236266) MAIN: Peak frequency: 1000 Hz[0m
+[0;32mI (236276) MQTT: Published freq: {"peak_frequency":1000}, msg_id=20094[0m
+[0;32mI (238416) MAIN: Peak frequency: 171 Hz[0m
+[0;32mI (238416) MQTT: Published freq: {"peak_frequency":171}, msg_id=18340[0m
+[0;32mI (240566) MAIN: Peak frequency: 15 Hz[0m
+[0;32mI (240576) MQTT: Published freq: {"peak_frequency":15}, msg_id=53678[0m
+[0;32mI (242716) MAIN: Peak frequency: 539 Hz[0m
+[0;32mI (242726) MQTT: Published freq: {"peak_frequency":539}, msg_id=61013[0m
+[0;32mI (244866) MAIN: Peak frequency: 843 Hz[0m
+[0;32mI (244866) MQTT: Published freq: {"peak_frequency":843}, msg_id=11752[0m
+[0;32mI (247006) MAIN: Peak frequency: 54 Hz[0m
+[0;32mI (247006) MQTT: Published freq: {"peak_frequency":54}, msg_id=61366[0m
+[0;32mI (249156) MAIN: Peak frequency: 835 Hz[0m
+[0;32mI (249156) MQTT: Published freq: {"peak_frequency":835}, msg_id=62689[0m
+[0;31mE (250416) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (250416) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (250416) task_wdt: Tasks currently running:[0m
+[0;31mE (250416) task_wdt: CPU 0: mqtt_task[0m
+[0;31mE (250416) task_wdt: CPU 1: dac_out[0m
+[0;31mE (250416) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C04D:0x3FFCC000 0x400D865F:0x3FFCC020 0x40089FF9:0x3FFCC040
+
+[0;32mI (251296) MAIN: Peak frequency: 85 Hz[0m
+[0;32mI (251296) MQTT: Published freq: {"peak_frequency":85}, msg_id=52932[0m
+[0;32mI (253436) MAIN: Peak frequency: 117 Hz[0m
+[0;32mI (253436) MQTT: Published freq: {"peak_frequency":117}, msg_id=65102[0m
+[0;31mE (255416) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (255416) task_wdt:  

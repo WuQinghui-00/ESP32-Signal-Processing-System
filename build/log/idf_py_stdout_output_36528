@@ -1,0 +1,271 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  2 2026 18:47:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27b24h (162596) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00037b4c vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=0003ba34 vaddr=40080000 size=045e4h ( 17892) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4a2ch (674348) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e4a54 vaddr=400845e4 size=1302ch ( 77868) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     hello_world[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Apr  2 2026 18:56:54[0m
+[0;32mI (487) app_init: ELF file SHA256:  285803375...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (508) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB8818 len 000277E8 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 40097610 len 000089F0 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (556) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (573) DAC: legacy driver is deprecated, please migrate to `driver/dac_oneshot.h`, `driver/dac_cosine.h` or `driver/dac_continuous.h` instead[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Signal Processing System[0m
+[0;32mI (625) MAIN: =========================================[0m
+[0;32mI (625) MAIN: Commands: SINE [freq], SQUARE [freq], TRIANGLE [freq], STOP, START[0m
+[0;32mI (645) DAC_WAVE: DAC initialized on GPIO25[0m
+[0;32mI (655) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (665) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (665) wifi:wifi certification version: v7.0[0m
+[0;32mI (665) wifi:config NVS flash: enabled[0m
+[0;32mI (665) wifi:config nano formating: disabled[0m
+[0;32mI (665) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (675) wifi:Init management short buffer num: 32[0m
+[0;32mI (685) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (695) wifi:Init static rx buffer num: 10[0m
+[0;32mI (695) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: accept mbox: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (725) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (735) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (745) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (825) wifi:mode : sta (8c:4f:00:27:66:44)[0m
+[0;32mI (825) wifi:enable tsf[0m
+[0;32mI (825) MQTT: WiFi initialized[0m
+[0;32mI (845) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (845) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2095) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2105) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (2415) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3685) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3695) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3735) wifi:connected with Boo, aid = 1, channel 6, BW20, bssid = be:01:28:4b:2f:89[0m
+[0;32mI (3735) wifi:security: WPA3-SAE, phy: bgn, rssi: -46[0m
+[0;32mI (3735) wifi:pm start, type: 1[0m
+
+[0;32mI (3735) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3795) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3825) MQTT: MQTT initialized, broker: mqtt://broker.emqx.io[0m
+[0;32mI (3825) WEB: Web server started[0m
+[0;32mI (4115) wifi:<ba-add>idx:0 (ifx:0, be:01:28:4b:2f:89), tid:0, ssn:769, winSize:64[0m
+[0;32mI (4115) DAC_WAVE: DAC started, freq=1000 Hz[0m
+[0;32mI (4115) MAIN: DAC: 1kH sine wave on GPIO25[0m
+[0;32mI (4115 MAIN: ADC: GPIO35 (connect GPIO25 to GPIO35)[0m
+[0;32mI (4265) MAIN: Peak frequency: 0 Hz[0m
+[0;32mI (4745) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4745) MQTT: Got IP: 172.20.10.2[0m
+[0;32mI (6655) MQTT: MQTT connected to broker[0m
+[0;32mI (6665) MQTT: Published freq: {"peak_frequency":0}, msg_id=14487[0m
+[0;32mI (8815) MAIN: Peak frequency: 1000 Hz[0m
+[0;32mI (8825) MQTT: Published freq: {"peak_frequency":1000}, msg_id=39351[0m
+[0;32mI (10965) MAIN: Peak frequency: 1132 Hz[0m
+[0;32mI (10965) MQTT: Published freq: {"peak_frequency":1132}, msg_id=526[0m
+[0;32mI (13105) MAIN: Peak frequency: 609 Hz[0m
+[0;32mI (13105) MQTT: Published freq: {"peak_frequency":609}, msg_id=64873[0m
+[0;32mI (15245) MAIN: Peak frequency: 1101 Hz[0m
+[0;32mI (15245) MQTT: Published freq: {"peak_frequency":1101}, msg_id=7194[0m
+[0;32mI (17455) MAIN: Peak frequency: 1570 Hz[0m
+[0;32mI (17455) MQTT: Published freq: {"peak_frequency":1570}, msg_id=36669[0m
+[0;32mI (19595) MAIN: Peak frequency: 1851 Hz[0m
+[0;32mI (19595) MQTT: Published freq: {"peak_frequency":1851}, msg_id=58183[0m
+[0;32mI (21735) MAIN: Peak frequency: 187 Hz[0m
+[0;32mI (21745) MQTT: Published freq: {"peak_frequency":187}, msg_id=10922[0m
+[0;32mI (23885) MAIN: Peak frequency: 859 Hz[0m
+[0;32mI (23885) MQTT: Published freq: {"peak_frequency":859}, msg_id=18041[0m
+[0;32mI (26025) MAIN: Peak frequency: 1125 Hz[0m
+[0;32mI (26025) MQTT: Published freq: {"peak_frequency":1125}, msg_id=65329[0m
+[0;32mI (28165) MAIN: Peak frequency: 312 Hz[0m
+[0;32mI (28165) MQTT: Published freq: {"peak_frequency":312}, msg_id=51390[0m
+[0;32mI (30305) MAIN: Peak frequency: 1062 Hz[0m
+[0;32mI (30315) MQTT: Published freq: {"peak_frequency":1062}, msg_id=64705[0m
+[0;32mI (32455) MAIN: Peak frequency: 156 Hz[0m
+[0;32mI (32455) MQTT: Published freq: {"peak_frequency":156}, msg_id=56284[0m
+[0;32mI (34595) MAIN: Peak frequency: 140 Hz[0m
+[0;32mI (34595) MQTT: Published freq: {"peak_frequency":140}, msg_id=25166[0m
+[0;32mI (36735) MAIN: Peak frequency: 1226 Hz[0m
+[0;32mI (36745) MQTT: Published freq: {"peak_frequency":1226}, msg_id=32395[0m
+[0;32mI (38885) MAIN: Peak frequency: 1921 Hz[0m
+[0;32mI (38885) MQTT: Published freq: {"peak_frequency":1921}, msg_id=25186[0m
+[0;32mI (41025) MAIN: Peak frequency: 242 Hz[0m
+[0;32mI (41025) MQTT: Published freq: {"peak_frequency":242}, msg_id=27150[0m
+[0;32mI (43185) MAIN: Peak frequency: 234 Hz[0m
+[0;32mI (43185) MQTT: Published freq: {"peak_frequency":234}, msg_id=62651[0m
+[0;31mE (43205) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (43205) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (43205) task_wdt: Tasks currently running:[0m
+[0;31mE (43205) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (43205) task_wdt: CPU 1: dac_out[0m
+[0;31mE (43205) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC310 0x4008A3B7:0x3FFCC320 0x400E1A0E:0x3FFCC340 0x400D864B:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (45325) MAIN: Peak frequency: 781 Hz[0m
+[0;32mI (45325) MQTT: Published freq: {"peak_frequency":781}, msg_id=37953[0m
+[0;32mI (47465) MAIN: Peak frequency: 1054 Hz[0m
+[0;32mI (47475) MQTT: Published freq: {"peak_frequency":1054}, msg_id=61570[0m
+[0;32mI (49615) MAIN: Peak frequency: 898 Hz[0m
+[0;32mI (49615) MQTT: Published freq: {"peak_frequency":898}, msg_id=41790[0m
+[0;32mI (51775) MAIN: Peak frequency: 1718 Hz[0m
+[0;32mI (51775) MQTT: Published freq: {"peak_frequency":1718}, msg_id=28918[0m
+[0;31mE (53445) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (53445) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (53445) task_wdt: Tasks currently running:[0m
+[0;31mE (53445) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (53445) task_wdt: CPU 1: dac_out[0m
+[0;31mE (53445) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC310 0x4008A3B7:0x3FFCC320 0x400E1A0E:0x3FFCC340 0x400D864B:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (53915) MAIN: Peak frequency: 1945 Hz[0m
+[0;32mI (53915) MQTT: Published freq: {"peak_frequency":1945}, msg_id=53848[0m
+[0;32mI (56465) MAIN: Peak frequency: 960 Hz[0m
+[0;32mI (56475) MQTT: Published freq: {"peak_frequency":960}, msg_id=13153[0m
+[0;32mI (58615) MAIN: Peak frequency: 1937 Hz[0m
+[0;32mI (58625) MQTT: Published freq: {"peak_frequency":1937}, msg_id=20404[0m
+[0;32mI (60765) MAIN: Peak frequency: 953 Hz[0m
+[0;32mI (60765) MQTT: Published freq: {"peak_frequency":953}, msg_id=10827[0m
+[0;32mI (62905) MAIN: Peak frequency: 1515 Hz[0m
+[0;32mI (62915) MQTT: Published freq: {"peak_frequency":1515}, msg_id=52749[0m
+[0;32mI (65055) MAIN: Peak frequency: 1937 Hz[0m
+[0;32mI (65055) MQTT: Published freq: {"peak_frequency":1937}, msg_id=50421[0m
+[0;32mI (67195) MAIN: Peak frequency: 539 Hz[0m
+[0;32mI (67195) MQTT: Published freq: {"peak_frequency":539}, msg_id=50052[0m
+[0;31mE (67635) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (67635) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (67635) task_wdt: Tasks currently running:[0m
+[0;31mE (67635) task_wdt: CPU 0: wifi[0m
+[0;31mE (67635) task_wdt: CPU 1: dac_out[0m
+[0;31mE (67635) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC310 0x4008A3B7:0x3FFCC320 0x400E1A0E:0x3FFCC340 0x400D864B:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (69345) MAIN: Peak frequency: 546 Hz[0m
+[0;32mI (69355) MQTT: Published freq: {"peak_frequency":546}, msg_id=7311[0m
+[0;32mI (71495) MAIN: Peak frequency: 312 Hz[0m
+[0;32mI (71495) MQTT: Published freq: {"peak_frequency":312}, msg_id=57227[0m
+[0;32mI (73645) MAIN: Peak frequency: 726 Hz[0m
+[0;32mI (73645) MQTT: Published freq: {"peak_frequency":726}, msg_id=44581[0m
+[0;32mI (75785) MAIN: Peak frequency: 210 Hz[0m
+[0;32mI (75785) MQTT: Published freq: {"peak_frequency":210}, msg_id=53291[0m
+[0;31mE (75965) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (75965) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (75965) task_wdt: Tasks currently running:[0m
+[0;31mE (75965) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (75965) task_wdt: CPU 1: dac_out[0m
+[0;31mE (75965) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC310 0x4008A3B7:0x3FFCC320 0x400E1A0E:0x3FFCC340 0x400D864B:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (77925) MAIN: Peak frequency: 1609 Hz[0m
+[0;32mI (77925) MQTT: Published freq: {"peak_frequency":1609}, msg_id=51423[0m
+[0;32mI (80065) MAIN: Peak frequency: 1906 Hz[0m
+[0;32mI (80065) MQTT: Published freq: {"peak_frequency":1906}, msg_id=13234[0m
+[0;31mE (81425) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (81425) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (81425) task_wdt: Tasks currently running:[0m
+[0;31mE (81425) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (81425) task_wdt: CPU 1: dac_out[0m
+[0;31mE (81425) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000C053:0x3FFCC350 0x40008544:0x3FFCC360 0x400D8653:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (82205) MAIN: Peak frequency: 554 Hz[0m
+[0;32mI (82215) MQTT: Published freq: {"peak_frequency":554}, msg_id=13467[0m
+[0;32mI (84355) MAIN: Peak frequency: 148 Hz[0m
+[0;32mI (84355) MQTT: Published freq: {"peak_frequency":148}, msg_id=50873[0m
+[0;32mI (86495) MAIN: Peak frequency: 1539 Hz[0m
+[0;32mI (86515) MQTT: Published freq: {"peak_frequency":1539}, msg_id=10683[0m
+[0;32mI (88655) MAIN: Peak frequency: 687 Hz[0m
+[0;32mI (88665) MQTT: Published freq: {"peak_frequency":687}, msg_id=26613[0m
+[0;32mI (90805) MAIN: Peak frequency: 320 Hz[0m
+[0;32mI (90805) MQTT: Published freq: {"peak_frequency":320}, msg_id=64712[0m
+[0;31mE (92045) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (92045) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (92045) task_wdt: Tasks currently running:[0m
+[0;31mE (92045) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (92045) task_wdt: CPU 1: dac_out[0m
+[0;31mE (92045) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC310 0x4008A3B7:0x3FFCC320 0x400E1A0E:0x3FFCC340 0x400D864B:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (92945) MAIN: Peak frequency: 328 Hz[0m
+[0;32mI (92945) MQTT: Published freq: {"peak_frequency":328}, msg_id=48047[0m
+[0;32mI (95085) MAIN: Peak frequency: 335 Hz[0m
+[0;32mI (95085) MQTT: Published freq: {"peak_frequency":335}, msg_id=35515[0m
+[0;31mE (97045) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (97045) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (97045) task_wdt: Tasks currently running:[0m
+[0;31mE (97045) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (97045) task_wdt: CPU 1: dac_out[0m
+[0;31mE (97045) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084F0A:0x3FFB2500 0x40083335:0x3FFB2520 0x4000BFED:0x3FFCC310 0x4008A3B7:0x3FFCC320 0x400E1A0E:0x3FFCC340 0x400D864B:0x3FFCC380 0x40089FF9:0x3FFCC3A0
+
+[0;32mI (97225) MAIN: Peak frequency: 898 Hz[0m

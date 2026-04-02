@@ -1,0 +1,779 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4008ad9e: prvSelectHighestPriorityTaskSMP at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3622
+[0m
+[0;33m--- 0x4008ad9b: prvSelectHighestPriorityTaskSMP at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3608 (discriminator 1)
+0x4008b80a: vTaskSwitchContext at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3712
+0x4008a50c: _frxt_dispatch at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008a4be: _frxt_int_exit at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x4000c056: xthal_get_ccount in ROM
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008a3b7: vPortClearInterruptMaskFromISR at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x400e1b2a: dac_output_voltage at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/dac_common_legacy.c:77
+0x400d865f: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:67
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000c053: xthal_get_ccount in ROM
+0x40008544: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4008cc94: xTaskIncrementTickOtherCores at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/esp_additions/freertos_tasks_c_additions.h:107
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4008cc91: xTaskIncrementTickOtherCores at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/esp_additions/freertos_tasks_c_additions.h:107
+0x4008a7ad: xPortSysTickHandler at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/port_systick.c:226
+0x4008a4dd: _frxt_timer_int at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:344
+0x4008333e: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x401684c1: __ssprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfiprintf.c:334
+0x40160a61: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1766 (discriminator 1)
+0x4015ceb3: snprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/snprintf.c:85
+0x400d8b81: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:51
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008a5fe: vPortYieldFromInt at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:648
+0x4008a4bb: _frxt_int_exit at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m--- 0x400832d2: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x4008a5fb: vPortYieldFromInt at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:647
+0x4008a4b8: _frxt_int_exit at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40084f0a: esp_crosscore_isr at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083335: _xt_lowint1 at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40008541: ets_delay_us in ROM
+0x400d8667: dac_output_task at D:/dac_test/hello_world/main/dac_wave.c:68
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:334
+0x40089ff9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4016a550: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:176
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4016a54d: find_value at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:175
+0x400d5479: pthread_getspecific at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread/pthread_local_storage.c:190
+0x40143e89: sys_thread_sem_get at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/port/freertos/sys_arch.c:492
+0x40144b03: netconn_apimsg at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:128
+0x40144e76: netconn_write_vectors_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:1064
+0x40144edd: netconn_write_partly at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_lib.c:980
+0x4013215e: lwip_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/sockets.c:1418
+0x400ec65c: send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/include/lwip/sockets.h:42
+ (inlined by) httpd_default_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:699
+0x4016b985: httpd_send_all at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:73
+0x400ec322: httpd_resp_send at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_txrx.c:257 (discriminator 1)
+0x400d8bf6: spectrum_data_handler at D:/dac_test/hello_world/main/webserver.c:58 (discriminator 1)
+0x400ec919: httpd_uri at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_uri.c:329
+0x400ed125: httpd_parse_req at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:663
+0x400ed1c4: httpd_req_new at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_parse.c:791
+0x400ec0b4: httpd_sess_process at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:426
+0x400eb38c: httpd_process_session at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:262
+0x4016b92b: httpd_sess_enum at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_sess.c:50 (discriminator 1)
+0x400ebac2: httpd_server at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server/src/httpd_main.c:312
+0x400ebb2a: httpd_thread

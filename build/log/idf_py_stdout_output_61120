@@ -1,0 +1,75 @@
+[1/5] cmd.exe /C "cd /D D:\dac_test\hello_world\build\esp-idf\esptool_py && E:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/dac_test/hello_world/build/partition_table/partition-table.bin D:/dac_test/hello_world/build/hello_world.bin"
+hello_world.bin binary size 0xe7850 bytes. Smallest app partition is 0x100000 bytes. 0x187b0 bytes (10%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\dac_test\hello_world\build\bootloader\esp-idf\esptool_py && E:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/dac_test/hello_world/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D E:\esp\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && E:\esp\Eesptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM5
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:4f:00:27:66:44
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16360...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16360 compressed) at 0x00001000 in 0.8 seconds (effective 274.5 kbit/s)...
+Hash of data verified.
+Compressed 948304 bytes to 595268...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e1ee... (5 %)
+Writing at 0x00027f1b... (8 %)
+Writing at 0x0002cd4a... (10 %)
+Writing at 0x0003449f... (13 %)
+Writing at 0x0003e2b3... (16 %)
+Writing at 0x00043f78... (18 %)
+Writing at 0x00049ba1... (21 %)
+Writing at 0x0004f893... (24 %)
+Writing at 0x000556ed... (27 %)
+Writing at 0x0005be03... (29 %)
+Writing at 0x00061860... (32 %)
+Writing at 0x0006774c... (35 %)
+Writing at 0x0006dc8f... (37 %)
+Writing at 0x0007384a... (40 %)
+Writing at 0x000795f1... (43 %)
+Writing at 0x0007e948... (45 %)
+Writing at 0x00083d07... (48 %)
+Writing at 0x000892b3... (51 %)
+Writing at 0x0008e646... (54 %)
+Writing at 0x00093cc4... (56 %)
+Writing at 0x0009946b... (59 %)
+Writing at 0x0009f278... (62 %)
+Writing at 0x000a4db0... (64 %)
+Writing at 0x000aa76e... (67 %)
+Writing at 0x000b0372... (70 %)
+Writing at 0x000b613c... (72 %)
+Writing at 0x000bb9e3... (75 %)
+Writing at 0x000c174f... (78 %)
+Writing at 0x000c7266... (81 %)
+Writing at 0x000ccc66... (83 %)
+Writing at 0x000d6b98... (86 %)
+Writing at 0x000dec1e... (89 %)
+Writing at 0x000e481b... (91 %)
+Writing at 0x000ea3a5... (94 %)
+Writing at 0x000f0573... (97 %)
+Writing at 0x000f581d... (100 %)
+Wrote 948304 bytes (595268 compressed) at 0x00010000 in 14.4 seconds (effective 526.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 492.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+spressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=E:/esp/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=E:/esp/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/dac_test/hello_world/build -P E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"

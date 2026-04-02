@@ -1,0 +1,535 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x40089fd9: vPortTaskWrapper at E:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401644b6: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:103
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x401644b3: .fft2r_l2 at D:/dac_test/hello_world/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_ae32_.S:101
+0x400d83f9: fft_dsp_process at D:/dac_test/hello_world/main/fft_dsp.c:30
+0x400d80d5: app_main at D:/dac_test/hello_world/main/main.c:107
+0x4016c3ab: main_task at E:/esp/Espressif/frameworks/e
