@@ -139,6 +139,7 @@ I (xxx) MQTT: MQTT connected
 I (xxx) MAIN: Peak frequency: 1000 Hz
 I (xxx) MQTT: Published: {"peak_frequency":1000}
 ```
+<img width="1106" height="306" alt="image" src="https://github.com/user-attachments/assets/1726d148-c676-4b1e-9142-a4f1d81576bc" />
 
 ---
 
