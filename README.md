@@ -15,9 +15,7 @@
 
 ## 📖 项目简介
 
-本项目设计并实现了一套完整的嵌入式信号处理系统，从底层驱动到上层应用，涵盖了**波形生成、数据采集、FFT 频谱分析、WiFi 连接、MQTT 云端上报、Web 实时监控**的全链路闭环。
-
-采用 FreeRTOS 多任务架构，体现了嵌入式全栈开发能力。
+本项目设计并实现了一套完整的嵌入式信号处理系统，从底层驱动到上层应用，涵盖了**波形生成、数据采集、FFT 频谱分析、WiFi 连接、MQTT 云端上报、Web 实时监控**的全链路闭环。采用 FreeRTOS 多任务架构，体现了嵌入式全栈开发能力。
 
 ---
 
@@ -162,6 +160,9 @@ I (xxx) MQTT: Published: {"peak_frequency":1000}
 │                                 │
 │   Auto-refresh every 2 seconds  │
 └─────────────────────────────────┘
+
+<img width="1754" height="756" alt="image" src="https://github.com/user-attachments/assets/3e11ffae-30cc-4871-a4ea-124e93379dbf" />
+
 ```
 
 ---
