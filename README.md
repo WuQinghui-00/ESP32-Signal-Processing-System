@@ -161,9 +161,9 @@ I (xxx) MQTT: Published: {"peak_frequency":1000}
 │   Auto-refresh every 2 seconds  │
 └─────────────────────────────────┘
 
-<img width="1754" height="756" alt="image" src="https://github.com/user-attachments/assets/3e11ffae-30cc-4871-a4ea-124e93379dbf" />
-
 ```
+<img width="1826" height="865" alt="image" src="https://github.com/user-attachments/assets/a23ff22f-46c5-4f19-a5fa-8764f753b6cb" />
+
 
 ---
 
