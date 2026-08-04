@@ -123,7 +123,7 @@ void app_main(void)
         }
 
         // MQTT report
-        mqtt_publish_freq(peak_freq_int);
+        mqtt_publish_spectrum(peak_freq_int, peak_amp, actual_rate);
 
         // Web spectrum update
         webserver_update_spectrum(magnitude, SAMPLE_LEN / 2, peak_freq_int);

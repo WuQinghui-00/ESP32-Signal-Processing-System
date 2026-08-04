@@ -90,15 +90,15 @@ void mqtt_init(void)
 }
 
 // 上报峰值频率
-void mqtt_publish_freq(int freq)
+void mqtt_publish_spectrum(int peak_freq, float peak_amp, int sample_rate)
 {
     if (client == NULL) return;
-    
-    char payload[128];
-    snprintf(payload, sizeof(payload), "{\"peak_frequency\":%d}", freq);
-    
+
+    char payload[160];
+    snprintf(payload, sizeof(payload), "{\"peak_frequency\":%d,\"peak_amplitude\":%.0f,\"sample_rate\":%d}", peak_freq, peak_amp, sample_rate);
+
     int msg_id = esp_mqtt_client_publish(client, MQTT_TOPIC_FREQ, payload, 0, 1, 0);
-    ESP_LOGI(TAG, "Published freq: %s, msg_id=%d", payload, msg_id);
+    ESP_LOGI(TAG, "Published: %s, msg_id=%d", payload, msg_id);
 }
 
 // 上报波形数据（可选）
