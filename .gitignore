@@ -1,0 +1,14 @@
+# ESP-IDF build output
+build/
+managed_components/
+
+# Local ESP-IDF configuration
+sdkconfig
+sdkconfig.old
+
+# Local editor settings
+.vscode/
+
+# Build logs and dependency lockfile
+build_log.txt
+dependencies.lock
