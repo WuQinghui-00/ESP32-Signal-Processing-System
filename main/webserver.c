@@ -1,14 +1,19 @@
 #include "webserver.h"
 #include "esp_http_server.h"
 #include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/semphr.h"
 #include <string.h>
 #include <stdio.h>
 
 static const char *TAG = "WEB";
 static httpd_handle_t server = NULL;
-static int16_t *spectrum_data = NULL;
-static int spectrum_len = 0;
-static int current_peak_freq = 0;
+#define SPECTRUM_MAX_LEN 128
+
+static SemaphoreHandle_t s_spectrum_lock = NULL;
+static int16_t s_spectrum[SPECTRUM_MAX_LEN];
+static int s_spectrum_len = 0;
+static int s_peak_freq = 0;
 
 // 只显示数据的 HTML
 static const char *index_html = 
@@ -56,13 +61,29 @@ static const char *index_html =
 // 数据接口
 static esp_err_t spectrum_data_handler(httpd_req_t *req)
 {
-    if (spectrum_data == NULL || spectrum_len == 0) {
+    int16_t snapshot[SPECTRUM_MAX_LEN];
+    int len = 0;
+    int peak_freq = 0;
+
+    /* Copy the latest spectrum to a local snapshot under the lock, so the
+     * response below is never built from a buffer that app_main is still
+     * writing (the old code shared a pointer to the caller's stack array). */
+    if (s_spectrum_lock != NULL && xSemaphoreTake(s_spectrum_lock, portMAX_DELAY) == pdTRUE) {
+        len = s_spectrum_len;
+        peak_freq = s_peak_freq;
+        if (len > 0) {
+            memcpy(snapshot, s_spectrum, len * sizeof(int16_t));
+        }
+        xSemaphoreGive(s_spectrum_lock);
+    }
+
+    if (len <= 0) {
         httpd_resp_send(req, "{\"peak_freq\":0,\"x\":[],\"y\":[]}", 32);
         return ESP_OK;
     }
-    
+
     char buffer[2048];
-    snprintf(buffer, sizeof(buffer), "{\"peak_freq\":%d,\"x\":[0,1,2,3],\"y\":[0,0,0,0]}", current_peak_freq);
+    snprintf(buffer, sizeof(buffer), "{\"peak_freq\":%d,\"x\":[0,1,2,3],\"y\":[0,0,0,0]}", peak_freq);
     httpd_resp_set_type(req, "application/json");
     httpd_resp_send(req, buffer, strlen(buffer));
     return ESP_OK;
@@ -77,6 +98,8 @@ static esp_err_t index_handler(httpd_req_t *req)
 
 void webserver_start(void)
 {
+    s_spectrum_lock = xSemaphoreCreateMutex();
+
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     if (httpd_start(&server, &config) == ESP_OK) {
         httpd_uri_t uri_index = { .uri = "/", .method = HTTP_GET, .handler = index_handler };
@@ -89,7 +112,17 @@ void webserver_start(void)
 
 void webserver_update_spectrum(int16_t *data, int len, int peak_freq)
 {
-    spectrum_data = data;
-    spectrum_len = len;
-    current_peak_freq = peak_freq;
+    if (data == NULL || len <= 0 || s_spectrum_lock == NULL) {
+        return;
+    }
+    if (len > SPECTRUM_MAX_LEN) {
+        len = SPECTRUM_MAX_LEN;
+    }
+
+    if (xSemaphoreTake(s_spectrum_lock, portMAX_DELAY) == pdTRUE) {
+        memcpy(s_spectrum, data, len * sizeof(int16_t));
+        s_spectrum_len = len;
+        s_peak_freq = peak_freq;
+        xSemaphoreGive(s_spectrum_lock);
+    }
 }
