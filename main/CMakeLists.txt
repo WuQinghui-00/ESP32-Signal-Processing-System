@@ -6,6 +6,6 @@ idf_component_register(SRCS
     "mqtt_report.c"
     "webserver.c"
     INCLUDE_DIRS "."
-    REQUIRES driver nvs_flash freertos mqtt esp_wifi esp_event esp_netif esp_http_server esp_timer)
+    REQUIRES driver nvs_flash freertos mqtt esp_wifi esp_event esp_netif esp_http_server esp_timer esp-dsp)
 
 target_compile_options(${COMPONENT_TARGET} PRIVATE -Wno-error)

@@ -99,6 +99,7 @@ void app_main(void)
     
     int16_t buffer[SAMPLE_LEN];
     int16_t magnitude[SAMPLE_LEN / 2];
+    float spectrum[SAMPLE_LEN / 2 + 1];
     
     while (1) {
         // ADC 采集
@@ -107,22 +108,26 @@ void app_main(void)
 
         int dc_offset = remove_dc_offset(buffer, SAMPLE_LEN);
         ESP_LOGI(TAG, "ADC: removed DC offset, mean=%d counts", dc_offset);
-        
-        // 计算幅值（简化版）
+
+        // FFT: Hann window -> 128-point radix-2 FFT -> magnitude spectrum
+        float peak_freq = 0.0f;
+        float peak_amp = 0.0f;
+        int peak_bin = fft_analyze(buffer, SAMPLE_LEN, SAMPLE_RATE, spectrum, &peak_freq, &peak_amp);
+        int peak_freq_int = (int)(peak_freq + 0.5f);
+        ESP_LOGI(TAG, "FFT: peak bin=%d, freq=%d Hz, amp=%.0f", peak_bin, peak_freq_int, peak_amp);
+
+        // Magnitude preview (bins 1..64) for the existing web interface
         for (int i = 0; i < SAMPLE_LEN / 2; i++) {
-            magnitude[i] = buffer[i] > 0 ? buffer[i] : -buffer[i];
+            float v = spectrum[i + 1] / 64.0f;
+            magnitude[i] = (v > 32767.0f) ? (int16_t)32767 : (int16_t)v;
         }
-        
-        // 峰值频率
-        int peak_freq = find_peak_frequency(buffer, SAMPLE_LEN, SAMPLE_RATE);
-        ESP_LOGI(TAG, "Peak frequency: %d Hz", peak_freq);
-        
-        // MQTT 上报
-        mqtt_publish_freq(peak_freq);
-        
-        // Web 更新频谱
-       webserver_update_spectrum((int16_t*)magnitude, SAMPLE_LEN / 2, peak_freq);
-        
+
+        // MQTT report
+        mqtt_publish_freq(peak_freq_int);
+
+        // Web spectrum update
+        webserver_update_spectrum(magnitude, SAMPLE_LEN / 2, peak_freq_int);
+
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
