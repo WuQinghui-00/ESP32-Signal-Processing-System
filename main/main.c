@@ -102,7 +102,8 @@ void app_main(void)
     
     while (1) {
         // ADC 采集
-        adc_sample(buffer, SAMPLE_LEN);
+        int actual_rate = adc_sample(buffer, SAMPLE_LEN);
+        ESP_LOGI(TAG, "ADC: sampled %d points, actual rate %d S/s", SAMPLE_LEN, actual_rate);
         
         // 计算幅值（简化版）
         for (int i = 0; i < SAMPLE_LEN / 2; i++) {
