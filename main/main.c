@@ -104,6 +104,9 @@ void app_main(void)
         // ADC 采集
         int actual_rate = adc_sample(buffer, SAMPLE_LEN);
         ESP_LOGI(TAG, "ADC: sampled %d points, actual rate %d S/s", SAMPLE_LEN, actual_rate);
+
+        int dc_offset = remove_dc_offset(buffer, SAMPLE_LEN);
+        ESP_LOGI(TAG, "ADC: removed DC offset, mean=%d counts", dc_offset);
         
         // 计算幅值（简化版）
         for (int i = 0; i < SAMPLE_LEN / 2; i++) {
