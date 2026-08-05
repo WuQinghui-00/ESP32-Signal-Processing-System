@@ -50,6 +50,7 @@ static void mqtt_resend_cached(void)
 
 static esp_timer_handle_t s_reconnect_timer = NULL;
 static int s_reconnect_attempt = 0;
+static uint32_t s_wifi_disconnect_total = 0;
 
 /* Delay for the next reconnect: base x 2^attempt, capped, plus/minus 20%
  * random jitter so devices do not reconnect in lockstep. */
@@ -80,8 +81,11 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base,
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        wifi_event_sta_disconnected_t *disc = (wifi_event_sta_disconnected_t *)event_data;
         int delay_ms = wifi_backoff_delay_ms();
-        ESP_LOGW(TAG, "WiFi disconnected, reconnect #%d in %d ms", s_reconnect_attempt + 1, delay_ms);
+        s_wifi_disconnect_total++;
+        ESP_LOGW(TAG, "WiFi disconnected (total=%" PRIu32 ", reason=%d), reconnect #%d in %d ms",
+                 s_wifi_disconnect_total, disc != NULL ? disc->reason : -1, s_reconnect_attempt + 1, delay_ms);
         esp_timer_stop(s_reconnect_timer);
         if (esp_timer_start_once(s_reconnect_timer, (uint64_t)delay_ms * 1000u) != ESP_OK) {
             esp_wifi_connect();
@@ -224,4 +228,15 @@ void mqtt_get_stats(mqtt_stats_t *stats)
     stats->ack_total = s_mqtt_ack_total;
     stats->disconnect_total = s_mqtt_disconnect_total;
     stats->error_total = s_mqtt_error_total;
+}
+
+void wifi_get_stats(wifi_stats_t *stats)
+{
+    if (stats == NULL) return;
+
+    wifi_ap_record_t ap;
+    esp_err_t ret = esp_wifi_sta_get_ap_info(&ap);
+    stats->rssi = (ret == ESP_OK) ? ap.rssi : 0;
+    stats->disconnect_total = s_wifi_disconnect_total;
+    stats->reconnect_attempt = (uint32_t)s_reconnect_attempt;
 }

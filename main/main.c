@@ -143,6 +143,9 @@ void app_main(void)
             ESP_LOGI(TAG, "Heap: free=%" PRIu32 "B min_free=%" PRIu32 "B",
                      (uint32_t)esp_get_free_heap_size(),
                      (uint32_t)heap_caps_get_minimum_free_size(MALLOC_CAP_8BIT));
+            wifi_stats_t wifi_stats;
+            wifi_get_stats(&wifi_stats);
+            ESP_LOGI(TAG, "WiFi: rssi=%d dBm disconnects=%" PRIu32 " attempts=%" PRIu32, wifi_stats.rssi, wifi_stats.disconnect_total, wifi_stats.reconnect_attempt);
         }
 
         vTaskDelay(pdMS_TO_TICKS(2000));
