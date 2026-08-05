@@ -146,6 +146,8 @@ void app_main(void)
             wifi_stats_t wifi_stats;
             wifi_get_stats(&wifi_stats);
             ESP_LOGI(TAG, "WiFi: rssi=%d dBm disconnects=%" PRIu32 " attempts=%" PRIu32, wifi_stats.rssi, wifi_stats.disconnect_total, wifi_stats.reconnect_attempt);
+            webserver_update_stack((int)uxTaskGetStackHighWaterMark(main_task),
+                                   (int)uxTaskGetStackHighWaterMark(s_uart_task));
         }
 
         vTaskDelay(pdMS_TO_TICKS(2000));

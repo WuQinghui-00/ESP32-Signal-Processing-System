@@ -1,10 +1,15 @@
 #include "webserver.h"
 #include "esp_http_server.h"
 #include "esp_log.h"
+#include "esp_system.h"
+#include "esp_heap_caps.h"
+#include "esp_timer.h"
+#include "mqtt_report.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
 #include <string.h>
 #include <stdio.h>
+#include <inttypes.h>
 
 static const char *TAG = "WEB";
 static httpd_handle_t server = NULL;
@@ -15,6 +20,8 @@ static SemaphoreHandle_t s_spectrum_lock = NULL;
 static int16_t s_spectrum[SPECTRUM_MAX_LEN];
 static int s_spectrum_len = 0;
 static int s_peak_freq = 0;
+static int s_main_stack = 0;
+static int s_uart_stack = 0;
 
 // 只显示数据的 HTML
 static const char *index_html = 
@@ -134,6 +141,70 @@ static esp_err_t spectrum_data_handler(httpd_req_t *req)
     return ESP_OK;
 }
 
+static void build_diag_json(char *buffer, size_t size, bool full)
+{
+    mqtt_stats_t mqtt_stats;
+    wifi_stats_t wifi_stats;
+    mqtt_get_stats(&mqtt_stats);
+    wifi_get_stats(&wifi_stats);
+
+    uint32_t free_heap = (uint32_t)esp_get_free_heap_size();
+    uint32_t min_heap = (uint32_t)heap_caps_get_minimum_free_size(MALLOC_CAP_8BIT);
+    uint32_t uptime_s = (uint32_t)(esp_timer_get_time() / 1000000u);
+
+    int main_stack = 0;
+    int uart_stack = 0;
+    if (xSemaphoreTake(s_spectrum_lock, portMAX_DELAY) == pdTRUE) {
+        main_stack = s_main_stack;
+        uart_stack = s_uart_stack;
+        xSemaphoreGive(s_spectrum_lock);
+    }
+
+    if (full) {
+        snprintf(buffer, size,
+                 "{\"uptime_s\":%" PRIu32 ","
+                 "\"wifi\":{\"connected\":%s,\"rssi\":%d,\"disconnects\":%" PRIu32 ",\"attempts\":%" PRIu32 "},"
+                 "\"mqtt\":{\"connected\":%s,\"published\":%" PRIu32 ",\"acked\":%" PRIu32 ",\"disconnects\":%" PRIu32 ",\"errors\":%" PRIu32 "},"
+                 "\"heap\":{\"free\":%" PRIu32 ",\"min_free\":%" PRIu32 "},"
+                 "\"stack\":{\"main\":%d,\"uart_cmd\":%d}}",
+                 uptime_s,
+                 wifi_stats.connected ? "true" : "false", wifi_stats.rssi,
+                 wifi_stats.disconnect_total, wifi_stats.reconnect_attempt,
+                 mqtt_stats.connected ? "true" : "false",
+                 mqtt_stats.publish_total, mqtt_stats.ack_total,
+                 mqtt_stats.disconnect_total, mqtt_stats.error_total,
+                 free_heap, min_heap,
+                 main_stack, uart_stack);
+    } else {
+        snprintf(buffer, size,
+                 "{\"uptime_s\":%" PRIu32 ","
+                 "\"wifi\":{\"connected\":%s,\"rssi\":%d},"
+                 "\"mqtt\":{\"connected\":%s},"
+                 "\"heap\":{\"free\":%" PRIu32 ",\"min_free\":%" PRIu32 "}}",
+                 uptime_s,
+                 wifi_stats.connected ? "true" : "false", wifi_stats.rssi,
+                 mqtt_stats.connected ? "true" : "false",
+                 free_heap, min_heap);
+    }
+}
+
+static esp_err_t status_handler(httpd_req_t *req)
+{
+    char buffer[1024];
+    build_diag_json(buffer, sizeof(buffer), false);
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, buffer, strlen(buffer));
+    return ESP_OK;
+}
+
+static esp_err_t metrics_handler(httpd_req_t *req)
+{
+    char buffer[1024];
+    build_diag_json(buffer, sizeof(buffer), true);
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, buffer, strlen(buffer));
+    return ESP_OK;
+}
 static esp_err_t index_handler(httpd_req_t *req)
 {
     httpd_resp_set_type(req, "text/html");
@@ -149,8 +220,12 @@ void webserver_start(void)
     if (httpd_start(&server, &config) == ESP_OK) {
         httpd_uri_t uri_index = { .uri = "/", .method = HTTP_GET, .handler = index_handler };
         httpd_uri_t uri_data = { .uri = "/spectrum/data", .method = HTTP_GET, .handler = spectrum_data_handler };
+        httpd_uri_t uri_status = { .uri = "/api/status", .method = HTTP_GET, .handler = status_handler };
+        httpd_uri_t uri_metrics = { .uri = "/api/metrics", .method = HTTP_GET, .handler = metrics_handler };
         httpd_register_uri_handler(server, &uri_index);
         httpd_register_uri_handler(server, &uri_data);
+        httpd_register_uri_handler(server, &uri_status);
+        httpd_register_uri_handler(server, &uri_metrics);
         ESP_LOGI(TAG, "Web server started");
     }
 }
@@ -168,6 +243,17 @@ void webserver_update_spectrum(int16_t *data, int len, int peak_freq)
         memcpy(s_spectrum, data, len * sizeof(int16_t));
         s_spectrum_len = len;
         s_peak_freq = peak_freq;
+        xSemaphoreGive(s_spectrum_lock);
+    }
+}
+
+void webserver_update_stack(int main_stack, int uart_stack)
+{
+    if (s_spectrum_lock == NULL) return;
+
+    if (xSemaphoreTake(s_spectrum_lock, portMAX_DELAY) == pdTRUE) {
+        s_main_stack = main_stack;
+        s_uart_stack = uart_stack;
         xSemaphoreGive(s_spectrum_lock);
     }
 }

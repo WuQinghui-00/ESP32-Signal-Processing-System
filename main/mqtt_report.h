@@ -13,6 +13,7 @@ typedef struct {
 } mqtt_stats_t;
 
 typedef struct {
+    bool connected;              /* true when connected to an AP */
     int rssi;                    /* dBm, 0 when not connected */
     uint32_t disconnect_total;   /* cumulative WiFi disconnects since boot */
     uint32_t reconnect_attempt;  /* attempts in the current backoff cycle */
