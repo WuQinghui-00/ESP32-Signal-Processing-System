@@ -1,6 +1,7 @@
 #include "mqtt_report.h"
 #include "mqtt_client.h"
 #include "esp_log.h"
+#include <inttypes.h>
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "esp_timer.h"
@@ -8,6 +9,12 @@
 
 static const char *TAG = "MQTT";
 static esp_mqtt_client_handle_t client = NULL;
+// MQTT statistics (connection state + QoS 1 ACK counters)
+static bool s_mqtt_connected = false;
+static uint32_t s_mqtt_publish_total = 0;
+static uint32_t s_mqtt_ack_total = 0;
+static uint32_t s_mqtt_disconnect_total = 0;
+static uint32_t s_mqtt_error_total = 0;
 
 // WiFi 配置（改成你的）
 #define WIFI_SSID "Boo"
@@ -104,10 +111,24 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base,
     esp_mqtt_event_handle_t event = event_data;
     switch (event->event_id) {
         case MQTT_EVENT_CONNECTED:
-            ESP_LOGI(TAG, "MQTT connected to broker");
+            s_mqtt_connected = true;
+            ESP_LOGI(TAG, "MQTT connected (published=%" PRIu32 " acked=%" PRIu32 " disconnects=%" PRIu32 ")",
+                     s_mqtt_publish_total, s_mqtt_ack_total, s_mqtt_disconnect_total);
             break;
         case MQTT_EVENT_DISCONNECTED:
-            ESP_LOGI(TAG, "MQTT disconnected");
+            s_mqtt_connected = false;
+            s_mqtt_disconnect_total++;
+            ESP_LOGW(TAG, "MQTT disconnected (total=%" PRIu32 ")", s_mqtt_disconnect_total);
+            break;
+        case MQTT_EVENT_PUBLISHED:
+            s_mqtt_ack_total++;
+            if (s_mqtt_ack_total % 5 == 0) {
+                ESP_LOGI(TAG, "MQTT QoS1 acked=%" PRIu32 " published=%" PRIu32, s_mqtt_ack_total, s_mqtt_publish_total);
+            }
+            break;
+        case MQTT_EVENT_ERROR:
+            s_mqtt_error_total++;
+            ESP_LOGE(TAG, "MQTT error (total=%" PRIu32 ")", s_mqtt_error_total);
             break;
         default:
             break;
@@ -139,6 +160,12 @@ void mqtt_publish_spectrum(int peak_freq, float peak_amp, int sample_rate)
     snprintf(payload, sizeof(payload), "{\"peak_frequency\":%d,\"peak_amplitude\":%.0f,\"sample_rate\":%d}", peak_freq, peak_amp, sample_rate);
 
     int msg_id = esp_mqtt_client_publish(client, MQTT_TOPIC_FREQ, payload, 0, 1, 0);
+    if (msg_id >= 0) {
+        s_mqtt_publish_total++;
+    } else {
+        s_mqtt_error_total++;
+        ESP_LOGE(TAG, "MQTT publish failed, msg_id=%d", msg_id);
+    }
     ESP_LOGI(TAG, "Published: %s, msg_id=%d", payload, msg_id);
 }
 
@@ -156,4 +183,15 @@ void mqtt_publish_waveform(int16_t *data, int len)
     if (pos > 1) payload[pos-1] = ']';
     
     esp_mqtt_client_publish(client, "/esp32/signal/waveform", payload, 0, 0, 0);
+}
+
+void mqtt_get_stats(mqtt_stats_t *stats)
+{
+    if (stats == NULL) return;
+
+    stats->connected = s_mqtt_connected;
+    stats->publish_total = s_mqtt_publish_total;
+    stats->ack_total = s_mqtt_ack_total;
+    stats->disconnect_total = s_mqtt_disconnect_total;
+    stats->error_total = s_mqtt_error_total;
 }
