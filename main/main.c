@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <inttypes.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
@@ -11,6 +12,8 @@
 #include "webserver.h"
 
 static const char *TAG = "MAIN";
+
+static TaskHandle_t s_uart_task = NULL;
 
 #define SAMPLE_RATE 1000     // 1000 Hz 采样率
 #define SAMPLE_LEN 128        // 128个点
@@ -95,7 +98,8 @@ void app_main(void)
     ESP_LOGI(TAG, "ADC: GPIO35 (connect GPIO25 to GPIO35)");
     
     // 创建串口命令任务
-    xTaskCreate(uart_task, "uart_cmd", 4096, NULL, 3, NULL);
+    xTaskCreate(uart_task, "uart_cmd", 4096, NULL, 3, &s_uart_task);
+    TaskHandle_t main_task = xTaskGetCurrentTaskHandle();
     
     int16_t buffer[SAMPLE_LEN];
     int16_t magnitude[SAMPLE_LEN / 2];
@@ -127,6 +131,14 @@ void app_main(void)
 
         // Web spectrum update
         webserver_update_spectrum(magnitude, SAMPLE_LEN / 2, peak_freq_int);
+
+        // Stack high-water mark monitor (every 30 loops = 60 s)
+        static int s_monitor_count = 0;
+        if (++s_monitor_count % 30 == 0) {
+            ESP_LOGI(TAG, "Stack high-water: main=%" PRIu32 "B uart_cmd=%" PRIu32 "B",
+                     (uint32_t)uxTaskGetStackHighWaterMark(main_task),
+                     (uint32_t)uxTaskGetStackHighWaterMark(s_uart_task));
+        }
 
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
