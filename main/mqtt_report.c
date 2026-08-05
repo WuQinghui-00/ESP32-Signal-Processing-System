@@ -2,6 +2,7 @@
 #include "mqtt_client.h"
 #include "esp_log.h"
 #include <inttypes.h>
+#include <string.h>
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "esp_timer.h"
@@ -15,6 +16,9 @@ static uint32_t s_mqtt_publish_total = 0;
 static uint32_t s_mqtt_ack_total = 0;
 static uint32_t s_mqtt_disconnect_total = 0;
 static uint32_t s_mqtt_error_total = 0;
+// Latest state cache: kept during disconnects, resent on reconnect
+static char s_last_payload[160];
+static bool s_has_last_payload = false;
 
 // WiFi 配置（改成你的）
 #define WIFI_SSID "Boo"
@@ -22,6 +26,23 @@ static uint32_t s_mqtt_error_total = 0;
 
 #define MQTT_BROKER "mqtt://broker.emqx.io"
 #define MQTT_TOPIC_FREQ "/esp32/signal/freq"
+
+/* Resend the latest cached state once after (re)connecting. */
+static void mqtt_resend_cached(void)
+{
+    if (client == NULL || !s_has_last_payload) {
+        return;
+    }
+
+    int msg_id = esp_mqtt_client_publish(client, MQTT_TOPIC_FREQ, s_last_payload, 0, 1, 0);
+    if (msg_id >= 0) {
+        s_mqtt_publish_total++;
+        ESP_LOGI(TAG, "Resent cached state: %s, msg_id=%d", s_last_payload, msg_id);
+    } else {
+        s_mqtt_error_total++;
+        ESP_LOGE(TAG, "Resend cached state failed, msg_id=%d", msg_id);
+    }
+}
 
 // WiFi reconnect: exponential backoff with random jitter
 #define WIFI_RECONNECT_BASE_MS 1000
@@ -114,6 +135,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base,
             s_mqtt_connected = true;
             ESP_LOGI(TAG, "MQTT connected (published=%" PRIu32 " acked=%" PRIu32 " disconnects=%" PRIu32 ")",
                      s_mqtt_publish_total, s_mqtt_ack_total, s_mqtt_disconnect_total);
+            mqtt_resend_cached();
             break;
         case MQTT_EVENT_DISCONNECTED:
             s_mqtt_connected = false;
@@ -158,7 +180,15 @@ void mqtt_publish_spectrum(int peak_freq, float peak_amp, int sample_rate)
 
     char payload[160];
     snprintf(payload, sizeof(payload), "{\"peak_frequency\":%d,\"peak_amplitude\":%.0f,\"sample_rate\":%d}", peak_freq, peak_amp, sample_rate);
+    /* Always keep the latest state so it can be resent after a reconnect. */
+    memcpy(s_last_payload, payload, sizeof(payload));
+    s_has_last_payload = true;
 
+
+    if (!s_mqtt_connected) {
+        ESP_LOGW(TAG, "MQTT offline, cached latest state");
+        return;
+    }
     int msg_id = esp_mqtt_client_publish(client, MQTT_TOPIC_FREQ, payload, 0, 1, 0);
     if (msg_id >= 0) {
         s_mqtt_publish_total++;
