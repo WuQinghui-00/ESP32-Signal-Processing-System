@@ -4,6 +4,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
+#include "esp_system.h"
+#include "esp_heap_caps.h"
 #include "nvs_flash.h"
 #include "dac_wave.h"
 #include "adc_sample.h"
@@ -138,6 +140,9 @@ void app_main(void)
             ESP_LOGI(TAG, "Stack high-water: main=%" PRIu32 "B uart_cmd=%" PRIu32 "B",
                      (uint32_t)uxTaskGetStackHighWaterMark(main_task),
                      (uint32_t)uxTaskGetStackHighWaterMark(s_uart_task));
+            ESP_LOGI(TAG, "Heap: free=%" PRIu32 "B min_free=%" PRIu32 "B",
+                     (uint32_t)esp_get_free_heap_size(),
+                     (uint32_t)heap_caps_get_minimum_free_size(MALLOC_CAP_8BIT));
         }
 
         vTaskDelay(pdMS_TO_TICKS(2000));
