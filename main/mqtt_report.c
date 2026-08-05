@@ -4,6 +4,7 @@
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "esp_timer.h"
+#include "esp_random.h"
 
 static const char *TAG = "MQTT";
 static esp_mqtt_client_handle_t client = NULL;
@@ -15,6 +16,35 @@ static esp_mqtt_client_handle_t client = NULL;
 #define MQTT_BROKER "mqtt://broker.emqx.io"
 #define MQTT_TOPIC_FREQ "/esp32/signal/freq"
 
+// WiFi reconnect: exponential backoff with random jitter
+#define WIFI_RECONNECT_BASE_MS 1000
+#define WIFI_RECONNECT_MAX_MS  30000
+
+static esp_timer_handle_t s_reconnect_timer = NULL;
+static int s_reconnect_attempt = 0;
+
+/* Delay for the next reconnect: base x 2^attempt, capped, plus/minus 20%
+ * random jitter so devices do not reconnect in lockstep. */
+static int wifi_backoff_delay_ms(void)
+{
+    int attempt = s_reconnect_attempt;
+    if (attempt > 5) attempt = 5;
+    int delay = WIFI_RECONNECT_BASE_MS * (1 << attempt);
+    if (delay > WIFI_RECONNECT_MAX_MS) delay = WIFI_RECONNECT_MAX_MS;
+    int jitter = delay / 5;
+    int offset = (int)(esp_random() % (2u * (unsigned)jitter + 1u)) - jitter;
+    delay += offset;
+    if (delay < 100) delay = 100;
+    return delay;
+}
+
+static void wifi_reconnect_timer_cb(void *arg)
+{
+    s_reconnect_attempt++;
+    ESP_LOGI(TAG, "WiFi reconnect attempt %d", s_reconnect_attempt);
+    esp_wifi_connect();
+}
+
 // WiFi 事件处理
 static void wifi_event_handler(void *arg, esp_event_base_t event_base,
                                 int32_t event_id, void *event_data)
@@ -22,10 +52,15 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base,
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
-        ESP_LOGI(TAG, "WiFi disconnected, retrying...");
-        esp_wifi_connect();
+        int delay_ms = wifi_backoff_delay_ms();
+        ESP_LOGW(TAG, "WiFi disconnected, reconnect #%d in %d ms", s_reconnect_attempt + 1, delay_ms);
+        esp_timer_stop(s_reconnect_timer);
+        if (esp_timer_start_once(s_reconnect_timer, (uint64_t)delay_ms * 1000u) != ESP_OK) {
+            esp_wifi_connect();
+        }
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        s_reconnect_attempt = 0;
         ESP_LOGI(TAG, "Got IP: " IPSTR, IP2STR(&event->ip_info.ip));
     }
 }
@@ -42,6 +77,12 @@ static void wifi_init(void)
     
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL));
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL));
+    esp_timer_create_args_t timer_args = {
+        .callback = wifi_reconnect_timer_cb,
+        .arg = NULL,
+        .name = "wifi_reconnect",
+    };
+    ESP_ERROR_CHECK(esp_timer_create(&timer_args, &s_reconnect_timer));
     
     wifi_config_t wifi_config = {
         .sta = {
