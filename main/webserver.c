@@ -67,14 +67,14 @@ static const char *index_html =
 "if(n===0)return;"
 "let max=1;"
 "for(let i=0;i<n;i++){if(d.y[i]>max)max=d.y[i];}"
-"// horizontal grid"
+"/* horizontal grid */"
 "ctx.strokeStyle='#1f4d7a';"
 "ctx.lineWidth=1;"
 "for(let g=0;g<5;g++){"
 "const gy=h-(g/4)*(h-20)-10;"
 "ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(w,gy);ctx.stroke();"
 "}"
-"// spectrum line"
+"/* spectrum line */"
 "ctx.strokeStyle='#00ffcc';"
 "ctx.lineWidth=2;"
 "ctx.beginPath();"
@@ -84,7 +84,7 @@ static const char *index_html =
 "if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);"
 "}"
 "ctx.stroke();"
-"// peak marker"
+"/* peak marker */"
 "let pi=0;"
 "for(let i=1;i<n;i++){if(d.y[i]>d.y[pi])pi=i;}"
 "const px=(n>1)?pi/(n-1)*w:0;"
@@ -217,6 +217,7 @@ void webserver_start(void)
     s_spectrum_lock = xSemaphoreCreateMutex();
 
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
+    config.stack_size = 8192;  /* raised: /spectrum/data handler needs more than the 4096 default */
     if (httpd_start(&server, &config) == ESP_OK) {
         httpd_uri_t uri_index = { .uri = "/", .method = HTTP_GET, .handler = index_handler };
         httpd_uri_t uri_data = { .uri = "/spectrum/data", .method = HTTP_GET, .handler = spectrum_data_handler };
