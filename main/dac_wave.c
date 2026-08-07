@@ -3,7 +3,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-#include "esp_rom_sys.h"
+#include "esp_timer.h"
 #include <math.h>
 
 static const char *TAG = "DAC_WAVE";
@@ -13,7 +13,8 @@ static uint8_t wave_table[TABLE_SIZE];
 static int current_freq = 1000;
 static int running = 0;
 static wave_type_t current_type = WAVE_SINE;
-static TaskHandle_t dac_task_handle = NULL;
+static esp_timer_handle_t s_dac_timer = NULL;
+static int s_timer_idx = 0;
 
 static void generate_sine_wave(uint8_t *table, int len)
 {
@@ -57,21 +58,23 @@ static void update_wave_table(void)
     }
 }
 
-static void dac_output_task(void *arg)
+/* Sample period for a full table cycle, clamped to a sane minimum. */
+static int dac_period_us(int freq_hz)
 {
-    dac_output_enable(DAC_CHANNEL_1);
-    
-    while (running) {
-        int delay_us = 1000000 / current_freq / TABLE_SIZE;
-        for (int i = 0; i < TABLE_SIZE; i++) {
-            dac_output_voltage(DAC_CHANNEL_1, wave_table[i]);
-            esp_rom_delay_us(delay_us);
-        }
+    int period = 1000000 / freq_hz / TABLE_SIZE;
+    if (period < 2) period = 2;
+    return period;
+}
+
+/* esp_timer callback: write the next DAC sample. Runs in the esp_timer task,
+ * so the DAC output no longer occupies a core with a busy loop. */
+static void dac_timer_cb(void *arg)
+{
+    dac_output_voltage(DAC_CHANNEL_1, wave_table[s_timer_idx]);
+    s_timer_idx++;
+    if (s_timer_idx >= TABLE_SIZE) {
+        s_timer_idx = 0;
     }
-    
-    dac_output_voltage(DAC_CHANNEL_1, 0);
-    dac_task_handle = NULL;
-    vTaskDelete(NULL);
 }
 
 void dac_wave_init(void)
@@ -85,23 +88,32 @@ void dac_wave_init(void)
 void dac_wave_start(int freq_hz)
 {
     if (running) return;
-    
+
     current_freq = freq_hz;
     running = 1;
     update_wave_table();
-    
-    xTaskCreate(dac_output_task, "dac_out", 2048, NULL, 5, &dac_task_handle);
-    ESP_LOGI(TAG, "DAC started, freq=%d Hz", freq_hz);
+
+    if (s_dac_timer == NULL) {
+        esp_timer_create_args_t timer_args = {
+            .callback = dac_timer_cb,
+            .arg = NULL,
+            .name = "dac_wave",
+        };
+        ESP_ERROR_CHECK(esp_timer_create(&timer_args, &s_dac_timer));
+    }
+
+    int period_us = dac_period_us(current_freq);
+    ESP_LOGI(TAG, "DAC started, freq=%d Hz (period %d us)", current_freq, period_us);
+    ESP_ERROR_CHECK(esp_timer_start_periodic(s_dac_timer, period_us));
 }
 
 void dac_wave_stop(void)
 {
     if (!running) return;
-    
+
     running = 0;
-    if (dac_task_handle) {
-        vTaskDelay(pdMS_TO_TICKS(100));
-        dac_task_handle = NULL;
+    if (s_dac_timer != NULL) {
+        esp_timer_stop(s_dac_timer);
     }
     dac_output_voltage(DAC_CHANNEL_1, 0);
     ESP_LOGI(TAG, "DAC stopped");
@@ -109,14 +121,23 @@ void dac_wave_stop(void)
 
 void dac_wave_set(wave_type_t type, int freq_hz)
 {
+    /* Stop the timer while table/period changes, then restart. */
+    if (running && s_dac_timer != NULL) {
+        esp_timer_stop(s_dac_timer);
+    }
+
     if (type != current_type) {
         current_type = type;
         update_wave_table();
     }
-    
+
     if (freq_hz != current_freq && freq_hz > 0) {
         current_freq = freq_hz;
     }
-    
+
+    if (running && s_dac_timer != NULL) {
+        esp_timer_start_periodic(s_dac_timer, dac_period_us(current_freq));
+    }
+
     ESP_LOGI(TAG, "Wave set: type=%d, freq=%d Hz", type, freq_hz);
 }
