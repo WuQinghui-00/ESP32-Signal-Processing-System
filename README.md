@@ -138,7 +138,24 @@ idf.py -p COM3 flash monitor
 ## 📊 真机测试结果（第 4 阶段，信号发生器 + 示波器）
 
 ### FFT 频率验证（分辨率 7.8125Hz，全部 ±1 bin 内）
+实测频率打印：
+输入频率为50Hz时
+<img width="1474" height="766" alt="image" src="https://github.com/user-attachments/assets/14f34df5-6f80-467b-9a7a-73a01e3b75f0" />
 
+100Hz时
+<img width="1432" height="758" alt="image" src="https://github.com/user-attachments/assets/b2647b0b-1ada-4a4f-972b-79b51c464907" />
+
+200Hz时
+<img width="1404" height="748" alt="image" src="https://github.com/user-attachments/assets/63e2fac0-2ab8-4b97-9f8b-f33c2acdd3d7" />
+
+300Hz时
+<img width="1568" height="682" alt="image" src="https://github.com/user-attachments/assets/04b18dd0-f1df-4944-990c-f851749273b9" />
+
+
+400Hz时
+<img width="1549" height="692" alt="image" src="https://github.com/user-attachments/assets/9a0546d4-e28c-4089-9d59-1701ba6a9e92" />
+
+故五档频率全部落在预期误差内（分辨率 7.8Hz，±1 bin 以内）：
 | 发生器设定 (Hz) | FFT 报频 (Hz) | 偏差 |
 |---|---|---|
 | 50 | 47 | -3 |
@@ -148,6 +165,17 @@ idf.py -p COM3 flash monitor
 | 400 | 398 | -2 |
 
 ### 幅度线性（200Hz）
+实测串口打印：
+幅度为0.5V
+<img width="1492" height="697" alt="image" src="https://github.com/user-attachments/assets/591892ac-3710-4e52-9562-434f83498257" />
+
+
+1V时
+<img width="1447" height="699" alt="image" src="https://github.com/user-attachments/assets/6a3dd9b3-3ee3-42dd-a6f1-2f9bbdfe9ac1" />
+
+2V时
+<img width="1454" height="703" alt="image" src="https://github.com/user-attachments/assets/48046188-30c9-4332-a461-44a2fe41323f" />
+
 
 | 设定 (Vpp) | FFT amp | 比值 |
 |---|---|---|
