@@ -15,7 +15,7 @@
 
 ## 📖 项目简介
 
-一套完整的嵌入式信号处理系统，从底层驱动到上层应用，覆盖**波形生成、ADC 采样校准、去直流、Hann 窗、128 点 FFT、峰值检测、WiFi/MQTT 上报、Web 实时频谱监控**的全链路闭环。基于 FreeRTOS 多任务 + ESP-IDF v5.3.1，并经过信号发生器 + 示波器真机验证，体现了嵌入式“采集 → 算法 → 网络 → 可观测性”的全栈能力。
+一套完整的嵌入式信号处理系统，从底层驱动到上层应用，覆盖**波形生成、ADC 采样校准、去直流、Hann 窗、128 点 FFT、峰值检测、WiFi/MQTT 上报、Web 实时频谱监控**的全链路闭环。基于 FreeRTOS 多任务 + ESP-IDF v5.3.1，并经过信号发生器 + 示波器真机验证（ [真机验证演示](https://www.bilibili.com/video/BV1APu268EVP/?spm_id_from=333.1387.list.card_archive.click)，体现了嵌入式“采集 → 算法 → 网络 → 可观测性”的全栈能力。
 
 ---
 
@@ -229,6 +229,7 @@ idf.py -p COM3 flash monitor
 
 - [ESP32 + FreeRTOS 智能光照监测系统](https://blog.csdn.net/2501_92470428/article/details/159498961)
 - [ESP32 MQTT 上云实战](https://blog.csdn.net/2501_92470428/article/details/159562399)
+- [真机验证演示](https://www.bilibili.com/video/BV1APu268EVP/?spm_id_from=333.1387.list.card_archive.click)
 
 ---
 
@@ -250,6 +251,7 @@ idf.py -p COM3 flash monitor
 - **邮箱**：1263105429@qq.com
 - **GitHub**：[WuQinghui-00](https://github.com/WuQinghui-00)
 - **CSDN**：[oxiaosui](https://blog.csdn.net/2501_92470428)
+- **哔哩哔哩**：[噢咘咘](https://space.bilibili.com/3493288348748524)
 
 ---
 
